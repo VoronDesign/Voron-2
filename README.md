@@ -1,2 +1,2 @@
 # VORON
-Marlin Firmware for VORON printer 
+Firmware, plans, and parts for VORON RepRap printer
