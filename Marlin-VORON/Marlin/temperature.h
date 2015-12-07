@@ -39,6 +39,10 @@ void manage_heater(); //it is critical that this is called periodically.
  int widthFil_to_size_ratio();
 #endif
 
+#if ENABLED(FSR_Z_SENSOR)
+ int fsrValue();
+#endif
+
 // low level conversion routines
 // do not use these routines and variables outside of temperature.cpp
 extern int target_temperature[4];  
@@ -135,6 +139,11 @@ HOTEND_ROUTINES(0);
   HOTEND_ROUTINES(3);
 #else
   #define setTargetHotend3(c) do{}while(0)
+#endif
+
+
+#if ENABLED(FSR_Z_SENSOR)
+  int fsrValue();
 #endif
 
 int getHeaterPower(int heater);

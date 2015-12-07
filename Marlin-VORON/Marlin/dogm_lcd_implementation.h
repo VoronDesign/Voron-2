@@ -278,6 +278,14 @@ static void _draw_heater_status(int x, int heater) {
   }
 }
 
+#if ENABLED(FSR_Z_SENSOR)
+static void _draw_fsr_status(int x) {
+  lcd_setFont(FONT_STATUSMENU);
+  u8g.setPrintPos(x,28);
+  lcd_print(itostr3(int(fsrValue())));
+}
+#endif
+
 static void lcd_implementation_status_screen() {
   u8g.setColorIndex(1); // black on white
 
@@ -316,6 +324,10 @@ static void lcd_implementation_status_screen() {
 
   // Extruders
   for (int i=0; i<EXTRUDERS; i++) _draw_heater_status(6 + i * 25, i);
+
+  #if ENABLED(FSR_Z_SENSOR)
+    _draw_fsr_status(6 + 25);
+  #endif
 
   // Heatbed
   if (EXTRUDERS < 4) _draw_heater_status(81, -1);

@@ -39,11 +39,11 @@
 #if ENABLED(PIDTEMP)
   // this adds an experimental additional term to the heating power, proportional to the extrusion speed.
   // if Kc is chosen well, the additional required power due to increased melting should be compensated.
-  #define PID_ADD_EXTRUSION_RATE
-  #if ENABLED(PID_ADD_EXTRUSION_RATE)
-    #define DEFAULT_Kc (100) //heating power=Kc*(e_speed)
-    #define LPQ_MAX_LEN 50
-  #endif
+  //#define PID_ADD_EXTRUSION_RATE
+  //#if ENABLED(PID_ADD_EXTRUSION_RATE)
+  //  #define DEFAULT_Kc (100) //heating power=Kc*(e_speed)
+  //  #define LPQ_MAX_LEN 50
+  //#endif
 #endif
 
 /**
@@ -86,7 +86,7 @@
 //This is for controlling a fan to cool down the stepper drivers
 //it will turn on when any driver is enabled
 //and turn off after the set amount of seconds from last driver being disabled again
-//#define CONTROLLERFAN_PIN -1 //Pin used for the fan to cool controller (-1 to disable)
+//#define CONTROLLERFAN_PIN  9 //Pin used for the fan to cool controller (-1 to disable)
 #define CONTROLLERFAN_SECS 60 //How many seconds, after all motors were disabled, the fan should run
 #define CONTROLLERFAN_SPEED 255  // == full speed
 

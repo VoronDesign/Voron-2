@@ -27,6 +27,8 @@ int absPreheatFanSpeed;
 // Function pointer to menu functions.
 typedef void (*menuFunc_t)();
 
+volatile bool override_return_to_status = false;
+
 uint8_t lcd_status_message_level;
 char lcd_status_message[3*LCD_WIDTH+1] = WELCOME_MSG; // worst case is kana with up to 3*LCD_WIDTH+1
 
@@ -47,6 +49,7 @@ static void lcd_status_screen();
   const float manual_feedrate[] = MANUAL_FEEDRATE;
   static void lcd_main_menu();
   static void lcd_tune_menu();
+  static void lcd_tune_fsr_menu();
   static void lcd_prepare_menu();
   static void lcd_move_menu();
   static void lcd_control_menu();
@@ -456,6 +459,14 @@ void lcd_set_home_offsets() {
   lcd_return_to_status();
 }
 
+inline void line_to_current(AxisEnum axis) {
+  #if ENABLED(DELTA)
+    calculate_delta(current_position);
+    plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS], manual_feedrate[axis]/60, active_extruder);
+  #else
+    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS], manual_feedrate[axis]/60, active_extruder);
+  #endif
+}
 
 #if ENABLED(BABYSTEPPING)
 
@@ -683,11 +694,58 @@ void lcd_cooldown() {
   lcd_return_to_status();
 }
 
+void lcd_check_z_endstop_menu()
+{
+  //override_return_to_status = true;
+  lcdDrawUpdate = 2;
+  refresh_cmd_timeout();
+  if(checkZEndstop()){
+    lcd_implementation_drawedit(PSTR("FSR"),"TRIGGERED");
+  }else{
+    lcd_implementation_drawedit(PSTR("FSR"),"open");
+  }
+  if (LCD_CLICKED) {
+    lcd_goto_menu(lcd_tune_fsr_menu);
+    //override_return_to_status = false;
+  }
+}
+
+void rehome_z()
+{
+  enqueuecommands_P(PSTR("G28 Z0")); // Rehome all
+  enqueuecommands_P(PSTR("G1 F200 Z3"));
+  enqueuecommands_P(PSTR("G1 F200 Z0"));
+}
+
+static void lcd_tune_fsr_menu()
+{
+    START_MENU();
+    MENU_ITEM(back, MSG_PREPARE, lcd_prepare_menu);
+    MENU_ITEM(submenu, "Check FSR Endstop", lcd_check_z_endstop_menu);
+    MENU_ITEM_EDIT(float32, "Z Offset", &zprobe_zoffset, -3.0, 3.0);
+    MENU_ITEM(function, "Rehome Z", rehome_z);
+    END_MENU();
+}
+
 /**
  *
  * "Prepare" submenu
  *
  */
+
+void lcd_auto_home(){
+  enqueuecommands_P(PSTR("G28"));
+  enqueuecommands_P(PSTR("G0 F400 Z1.0"));
+  enqueuecommands_P(PSTR("G0 F400 Z0.0"));
+  lcd_return_to_status();
+}
+
+void lcd_park_printhead(){
+  enqueuecommands_P(PSTR("G28"));
+  enqueuecommands_P(PSTR("G0 F400 Z0.1"));
+  enqueuecommands_P(PSTR("G0 F4000 X10.0 Y10.0"));
+  lcd_return_to_status();
+}
 
 static void lcd_prepare_menu() {
   START_MENU();
@@ -700,13 +758,22 @@ static void lcd_prepare_menu() {
   //
   // Auto Home
   //
-  MENU_ITEM(gcode, MSG_AUTO_HOME, PSTR("G28"));
+  MENU_ITEM(function, MSG_AUTO_HOME, lcd_auto_home);
+
+  // Drop Bed
+  MENU_ITEM(gcode, "Drop Bed", PSTR("G0 F500 Z100.00"));
+
+  MENU_ITEM(function, "Park Printhead", lcd_park_printhead);
+
+  MENU_ITEM(submenu, "Tune FSR endstop", lcd_tune_fsr_menu);
 
   //
   // Set Home Offsets
   //
   MENU_ITEM(function, MSG_SET_HOME_OFFSETS, lcd_set_home_offsets);
   //MENU_ITEM(gcode, MSG_SET_ORIGIN, PSTR("G92 X0 Y0 Z0"));
+
+
 
   //
   // Level Bed
@@ -781,15 +848,6 @@ static void lcd_prepare_menu() {
   }
 
 #endif // DELTA_CALIBRATION_MENU
-
-inline void line_to_current(AxisEnum axis) {
-  #if ENABLED(DELTA)
-    calculate_delta(current_position);
-    plan_buffer_line(delta[X_AXIS], delta[Y_AXIS], delta[Z_AXIS], current_position[E_AXIS], manual_feedrate[axis]/60, active_extruder);
-  #else
-    plan_buffer_line(current_position[X_AXIS], current_position[Y_AXIS], current_position[Z_AXIS], current_position[E_AXIS], manual_feedrate[axis]/60, active_extruder);
-  #endif
-}
 
 /**
  *
@@ -1631,7 +1689,7 @@ void lcd_update() {
       #endif
 
       bool encoderPastThreshold = (abs(encoderDiff) >= ENCODER_PULSES_PER_STEP);
-      if (encoderPastThreshold || LCD_CLICKED) {
+      if (encoderPastThreshold || LCD_CLICKED ) {
         if (encoderPastThreshold) {
           int32_t encoderMultiplier = 1;
 
@@ -1668,6 +1726,7 @@ void lcd_update() {
           encoderPosition += (encoderDiff * encoderMultiplier) / ENCODER_PULSES_PER_STEP;
           encoderDiff = 0;
         }
+
         return_to_status_ms = ms + LCD_TIMEOUT_TO_STATUS;
         lcdDrawUpdate = 1;
       }

@@ -329,6 +329,10 @@ extern int fanSpeed;
   extern int meas_delay_cm; //delay distance
 #endif
 
+#if ENABLED(FSR_Z_SENSOR)
+  extern int fsr_value;
+#endif
+
 #if ENABLED(PID_ADD_EXTRUSION_RATE)
   extern int lpq_len;
 #endif

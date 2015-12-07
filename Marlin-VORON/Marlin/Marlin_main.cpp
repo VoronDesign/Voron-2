@@ -259,7 +259,7 @@ int extruder_multiplier[EXTRUDERS] = ARRAY_BY_EXTRUDERS1(100);
 bool volumetric_enabled = false;
 float filament_size[EXTRUDERS] = ARRAY_BY_EXTRUDERS1(DEFAULT_NOMINAL_FILAMENT_DIA);
 float volumetric_multiplier[EXTRUDERS] = ARRAY_BY_EXTRUDERS1(1.0);
-float home_offset[3] = { 0 };
+float home_offset[3] = { 1.0, 3.0, 0 };
 float min_pos[3] = { X_MIN_POS, Y_MIN_POS, Z_MIN_POS };
 float max_pos[3] = { X_MAX_POS, Y_MAX_POS, Z_MAX_POS };
 
@@ -401,6 +401,10 @@ bool target_direction;
   int delay_index2 = -1;  //index into ring buffer - set to -1 on startup to indicate ring buffer needs to be initialized
   float delay_dist = 0; //delay distance counter
   int meas_delay_cm = MEASUREMENT_DELAY_CM;  //distance delay setting
+#endif
+
+#if ENABLED(FSR_Z_SENSOR)
+  int fsr_value = -1;
 #endif
 
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
@@ -5128,7 +5132,17 @@ inline void gcode_M400() { st_synchronize(); }
     SERIAL_PROTOCOLLN(filament_width_meas);
   }
 
+
 #endif // FILAMENT_SENSOR
+
+#if ENABLED(FSR_Z_SENSOR)
+
+  inline void gcode_M412() {
+    SERIAL_PROTOCOLPGM("FSR Value:");
+    SERIAL_PROTOCOLLN(fsr_value);
+  }
+
+#endif
 
 /**
  * M410: Quickstop - Abort all planned moves
@@ -5378,7 +5392,7 @@ inline void gcode_M503() {
           next_tick = ms + 2500; // feedback every 2.5s while waiting
         }
         manage_heater();
-        manage_inactivity(true);
+        manage_inactivity();
         lcd_update();
       #else
         current_position[E_AXIS] += AUTO_FILAMENT_CHANGE_LENGTH;
@@ -6142,6 +6156,12 @@ void process_next_command() {
       case 410: // M410 quickstop - Abort all the planned moves.
         gcode_M410();
         break;
+
+      #if ENABLED(FSR_Z_SENSOR)
+      case 412:
+        gcode_M412();
+        break;
+      #endif
 
       #if ENABLED(MESH_BED_LEVELING)
         case 420: // M420 Enable/Disable Mesh Bed Leveling
@@ -6930,23 +6950,17 @@ void manage_inactivity(bool ignore_stepper_queue/*=false*/) {
 
   if (max_inactive_time && ms > previous_cmd_ms + max_inactive_time) kill(PSTR(MSG_KILLED));
 
-  if (stepper_inactive_time && ms > previous_cmd_ms + stepper_inactive_time
-      && !ignore_stepper_queue && !blocks_queued()) {
-    #if DISABLE_X == true
+  if (stepper_inactive_time 
+      && (ms > (previous_cmd_ms + stepper_inactive_time))
+      && !ignore_stepper_queue 
+      && !blocks_queued()) {
       disable_x();
-    #endif
-    #if DISABLE_Y == true
       disable_y();
-    #endif
-    #if DISABLE_Z == true
       disable_z();
-    #endif
-    #if DISABLE_E == true
       disable_e0();
       disable_e1();
       disable_e2();
       disable_e3();
-    #endif
   }
 
   #ifdef CHDK // Check if pin should be set to LOW after M240 set it to HIGH

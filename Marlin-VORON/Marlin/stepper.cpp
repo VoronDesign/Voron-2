@@ -243,6 +243,11 @@ volatile signed char count_direction[NUM_AXIS] = { 1, 1, 1, 1 };
 #define ENABLE_STEPPER_DRIVER_INTERRUPT()  TIMSK1 |= BIT(OCIE1A)
 #define DISABLE_STEPPER_DRIVER_INTERRUPT() TIMSK1 &= ~BIT(OCIE1A)
 
+bool checkZEndstop()
+{ 
+    return (READ(Z_MIN_PIN) != Z_MIN_ENDSTOP_INVERTING);
+}
+
 void endstops_hit_on_purpose() {
   endstop_hit_bits = 0;
 }

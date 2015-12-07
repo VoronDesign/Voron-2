@@ -73,6 +73,13 @@ unsigned char soft_pwm_bed;
   int current_raw_filwidth = 0;  //Holds measured filament diameter - one extruder only
 #endif  
 
+#if ENABLED(FSR_Z_SENSOR)
+  int current_raw_fsr = 0;  //Holds measured FSR value
+  int fsrValue() { 
+    return current_raw_fsr; 
+  }
+#endif  
+
 #if ENABLED(THERMAL_PROTECTION_HOTENDS) || ENABLED(THERMAL_PROTECTION_BED)
   enum TRState { TRReset, TRInactive, TRFirstHeating, TRStable, TRRunaway };
   void thermal_runaway_protection(TRState *state, millis_t *timer, float temperature, float target_temperature, int heater_id, int period_seconds, int hysteresis_degc);
@@ -686,6 +693,7 @@ void manage_heater() {
     }
   #endif //FILAMENT_SENSOR
 
+
   #if DISABLED(PIDTEMPBED)
     if (ms < next_bed_check_ms) return;
     next_bed_check_ms = ms + BED_CHECK_INTERVAL;
@@ -815,6 +823,9 @@ static void updateTemperaturesFromRawValues() {
   #if HAS_FILAMENT_SENSOR
     filament_width_meas = analog2widthFil();
   #endif
+  #if HAS_FSR_SENSOR
+    fsr_value = fsrValue();
+  #endif
   //Reset the watchdog after we know we have a temperature measurement.
   watchdog_reset();
 
@@ -841,7 +852,6 @@ static void updateTemperaturesFromRawValues() {
   } 
 
 #endif
-
 
 /**
  * Initialize the temperature manager
@@ -1214,6 +1224,8 @@ enum TempState {
   MeasureTemp_2,
   PrepareTemp_3,
   MeasureTemp_3,
+  Prepare_FSR,
+  Measure_FSR,
   Prepare_FILWIDTH,
   Measure_FILWIDTH,
   StartupDelay // Startup, delay initial temp reading a tiny bit so the hardware can settle
@@ -1286,6 +1298,10 @@ ISR(TIMER0_COMPB_vect) {
     static unsigned long raw_filwidth_value = 0;
   #endif
   
+  #if HAS_FSR_SENSOR
+    static unsigned long raw_fsr_value = 0;
+  #endif
+
   #if DISABLED(SLOW_PWM_HEATERS)
     /**
      * standard PWM modulation
@@ -1522,9 +1538,26 @@ ISR(TIMER0_COMPB_vect) {
       #if HAS_TEMP_3
         raw_temp_value[3] += ADC;
       #endif
-      temp_state = Prepare_FILWIDTH;
+      temp_state = Prepare_FSR;
       break;
 
+    case Prepare_FSR:
+      #if HAS_FSR_SENSOR
+        START_ADC(FSR_PIN);
+      #endif
+      lcd_buttons_update();
+      temp_state = Measure_FSR;
+      break;
+    case Measure_FSR:
+      #if HAS_FSR_SENSOR
+        //if (ADC > 102) { //check that ADC is reading a voltage > 0.5 volts, otherwise don't take in the data.
+        raw_fsr_value = ADC;
+          //raw_fsr_value -= (raw_fsr_value>>7);  //multiply raw_filwidth_value by 127/128
+          //raw_fsr_value += ((unsigned long)ADC<<7);  //add new ADC reading
+        //}
+      #endif
+      temp_state = Prepare_FILWIDTH;
+      break;
     case Prepare_FILWIDTH:
       #if HAS_FILAMENT_SENSOR
         START_ADC(FILWIDTH_PIN);
@@ -1561,6 +1594,10 @@ ISR(TIMER0_COMPB_vect) {
     // Filament Sensor - can be read any time since IIR filtering is used
     #if HAS_FILAMENT_SENSOR
       current_raw_filwidth = raw_filwidth_value >> 10;  // Divide to get to 0-16384 range since we used 1/128 IIR filter approach
+    #endif
+
+    #if HAS_FSR_SENSOR
+      current_raw_fsr = raw_fsr_value;
     #endif
 
     temp_count = 0;

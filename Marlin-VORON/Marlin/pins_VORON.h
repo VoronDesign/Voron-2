@@ -69,9 +69,14 @@
   #define FILRUNOUT_PIN     4
 #endif
 
-#define CONTROLLERFAN_PIN  9 // Pin used for the fan to cool controller
-#define EXTRUDER_0_AUTO_FAN_PIN 4 // Server pin 4 for E3D Fan
-#define FAN_PIN            8
+#if ENABLED(FSR_Z_SENSOR)
+  #define FSR_PIN           3   
+#endif
+
+#define CONTROLLERFAN_PIN  8 // Pin used for the fan to cool controller
+#define EXTRUDER_0_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
+#define EXTRUDER_1_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
+#define FAN_PIN            5
 #define PS_ON_PIN          12
 
 #if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER) || ENABLED(G3D_PANEL)
@@ -80,12 +85,12 @@
   #define KILL_PIN         -1
 #endif
 
-#define HEATER_0_PIN       10   // EXTRUDER 1
-#define HEATER_1_PIN       -1   // EXTRUDER 2
+#define HEATER_0_PIN       9   // EXTRUDER 1
+#define HEATER_1_PIN       10   // EXTRUDER 2
 #define HEATER_2_PIN       -1   // EXTRUDER 3
 
-#define TEMP_0_PIN         13   // ANALOG NUMBERING
-#define TEMP_1_PIN         15   // ANALOG NUMBERING
+#define TEMP_0_PIN         15   // ANALOG NUMBERING
+#define TEMP_1_PIN         13   // ANALOG NUMBERING
 #define TEMP_2_PIN         -1   // ANALOG NUMBERING
 #define HEATER_BED_PIN     11    // Using Servo pin 11 for SSR
 
