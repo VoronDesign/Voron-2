@@ -27,6 +27,7 @@
 // fi       Finnish
 // an       Aragonese
 // nl       Dutch
+// gl       Galician
 // ca       Catalan
 // eu       Basque-Euskera
 // kana     Japanese
@@ -80,8 +81,8 @@
   #error BUILD_VERSION Information must be specified
 #endif
 
-#ifndef MACHINE_UUID
-   #define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#ifndef UUID
+  #define UUID "00000000-0000-0000-0000-000000000000"
 #endif
 
 
@@ -121,7 +122,7 @@
 #define MSG_INVALID_EXTRUDER                "Invalid extruder"
 #define MSG_INVALID_SOLENOID                "Invalid solenoid"
 #define MSG_ERR_NO_THERMISTORS              "No thermistors - no temperature"
-#define MSG_M115_REPORT                     "FIRMWARE_NAME:Marlin " DETAILED_BUILD_VERSION " SOURCE_CODE_URL:" SOURCE_CODE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) " UUID:" MACHINE_UUID "\n"
+#define MSG_M115_REPORT                     "FIRMWARE_NAME:Marlin " DETAILED_BUILD_VERSION " SOURCE_CODE_URL:" SOURCE_CODE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) " HEATER_BLOCK_COUNT:" STRINGIFY(HEATER_BLOCKS) " UUID:" UUID "\n"
 #define MSG_COUNT_X                         " Count X: "
 #define MSG_ERR_KILLED                      "Printer halted. kill() called!"
 #define MSG_ERR_STOPPED                     "Printer stopped due to errors. Fix the error and use M999 to restart. (Temperature is reset. Set it after restarting)"
@@ -136,7 +137,8 @@
 #define MSG_Z_MAX                           "z_max: "
 #define MSG_Z2_MAX                          "z2_max: "
 #define MSG_Z_PROBE                         "z_probe: "
-#define MSG_Z_OFFSET                        "Z Offset: "
+#define MSG_REHOME_Z                        "Rehome Z"
+#define MSG_DROP_BED                        "Drop Bed"
 #define MSG_ERR_MATERIAL_INDEX              "M145 S<index> out of range (0-1)"
 #define MSG_ERR_M421_REQUIRES_XYZ           "M421 requires XYZ parameters"
 #define MSG_ERR_MESH_INDEX_OOB              "Mesh XY index is out of bounds"

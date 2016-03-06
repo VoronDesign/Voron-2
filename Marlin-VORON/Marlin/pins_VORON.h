@@ -1,5 +1,5 @@
 /**
- * Arduino Mega with RAMPS v1.3 pin assignments
+ * Arduino Mega with RAMPS v1.3 v1.4 pin assignments
  *
  * Applies to the following boards:
  *
@@ -8,8 +8,18 @@
  *  RAMPS_13_EFF (Extruder, Fan, Fan)
  *  RAMPS_13_EEF (Extruder, Extruder, Fan)
  *  RAMPS_13_SF  (Spindle, Controller Fan)
+ * 
+ *  RAMPS_14_EFB (Extruder, Fan, Bed)
+ *  RAMPS_14_EEB (Extruder, Extruder, Bed)
+ *  RAMPS_14_EFF (Extruder, Fan, Fan)
+ *  RAMPS_14_EEF (Extruder, Extruder, Fan)
+ *  RAMPS_14_SF  (Spindle, Controller Fan)
  *
  *  Other pins_MYBOARD.h files may override these defaults
+ *
+ *  Differences between
+ *  RAMPS_13 | RAMPS_14
+ *         7 | 11
  */
 
 #if !defined(__AVR_ATmega1280__) && !defined(__AVR_ATmega2560__)
@@ -17,11 +27,6 @@
 #endif
 
 #define LARGE_FLASH true
-
-#define SERVO0_PIN         11
-#define SERVO1_PIN          6
-#define SERVO2_PIN          5
-//#define SERVO3_PIN          4
 
 #define X_STEP_PIN         54
 #define X_DIR_PIN          55
@@ -69,10 +74,6 @@
   #define FILRUNOUT_PIN     4
 #endif
 
-#if ENABLED(FSR_Z_SENSOR)
-  #define FSR_PIN           3   
-#endif
-
 #define CONTROLLERFAN_PIN  8 // Pin used for the fan to cool controller
 #define EXTRUDER_0_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
 #define EXTRUDER_1_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
@@ -86,15 +87,16 @@
 #endif
 
 #define HEATER_0_PIN       9   // EXTRUDER 1
-#define HEATER_1_PIN       10   // EXTRUDER 2
-#define HEATER_2_PIN       -1   // EXTRUDER 3
+#define HEATER_1_PIN     10
+
+#define HEATER_2_PIN       -1
 
 #define TEMP_0_PIN         15   // ANALOG NUMBERING
 #define TEMP_1_PIN         13   // ANALOG NUMBERING
 #define TEMP_2_PIN         -1   // ANALOG NUMBERING
-#define HEATER_BED_PIN     11    // Using Servo pin 11 for SSR
 
-#define TEMP_BED_PIN         14   // ANALOG NUMBERING
+#define HEATER_BED_PIN     11   // Using Servo pin 11 for SSR
+#define TEMP_BED_PIN       14   // ANALOG NUMBERING
 
 #if ENABLED(ULTRA_LCD)
 
@@ -132,7 +134,9 @@
       #define KILL_PIN 41
     #elif ENABLED(LCD_I2C_VIKI)
       #define BTN_EN1 22  // reverse if the encoder turns the wrong way.
-      #define BTN_EN2 7
+      #define BTN_EN2 7   // http://files.panucatt.com/datasheets/viki_wiring_diagram.pdf
+                          // tells about 40/42.
+                          // 22/7 are unused on RAMPS_14. 22 is unused and 7 the SERVO0_PIN on RAMPS_13.
       #define BTN_ENC -1
       #define LCD_SDSS 53
       #define SD_DETECT_PIN 49
@@ -148,26 +152,26 @@
       #define DOGLCD_A0 27
       #define LCD_PIN_BL 33
     #elif ENABLED(MINIPANEL)
-       #define BEEPER_PIN 42
-       // Pins for DOGM SPI LCD Support
-       #define DOGLCD_A0  44
-       #define DOGLCD_CS  66
-       #define LCD_PIN_BL	65	// backlight LED on A11/D65
-       #define SDSS   53
-       
-       #define KILL_PIN 64
-       // GLCD features
-       //#define LCD_CONTRAST 190
-       // Uncomment screen orientation
-         //#define LCD_SCREEN_ROT_90
-         //#define LCD_SCREEN_ROT_180
-         //#define LCD_SCREEN_ROT_270
-       //The encoder and click button
-       #define BTN_EN1 40
-       #define BTN_EN2 63
-       #define BTN_ENC 59  //the click switch
-       //not connected to a pin
-       #define SD_DETECT_PIN 49
+      #define BEEPER_PIN 42
+      // Pins for DOGM SPI LCD Support
+      #define DOGLCD_A0  44
+      #define DOGLCD_CS  66
+      #define LCD_PIN_BL 65 // backlight LED on A11/D65
+      #define SDSS   53
+
+      #define KILL_PIN 64
+      // GLCD features
+      //#define LCD_CONTRAST 190
+      // Uncomment screen orientation
+      //#define LCD_SCREEN_ROT_90
+      //#define LCD_SCREEN_ROT_180
+      //#define LCD_SCREEN_ROT_270
+      //The encoder and click button
+      #define BTN_EN1 40
+      #define BTN_EN2 63
+      #define BTN_ENC 59  //the click switch
+      //not connected to a pin
+      #define SD_DETECT_PIN 49
 
     #else
 

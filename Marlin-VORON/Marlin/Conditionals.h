@@ -74,10 +74,10 @@
   #endif
 
   #if ENABLED(MINIPANEL)
-   #define DOGLCD
-   #define ULTIPANEL
-   #define NEWPANEL
-   #define DEFAULT_LCD_CONTRAST 17
+    #define DOGLCD
+    #define ULTIPANEL
+    #define NEWPANEL
+    #define DEFAULT_LCD_CONTRAST 17
   #endif
 
   /**
@@ -135,9 +135,9 @@
   // https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/schematics#!shiftregister-connection
 
   #if ENABLED(SAV_3DLCD)
-     #define SR_LCD_2W_NL    // Non latching 2 wire shiftregister
-     #define ULTIPANEL
-     #define NEWPANEL
+    #define SR_LCD_2W_NL    // Non latching 2 wire shiftregister
+    #define ULTIPANEL
+    #define NEWPANEL
   #endif
 
   #if ENABLED(ULTIPANEL)
@@ -205,7 +205,7 @@
     #endif
     #if ENABLED(U8GLIB_SSD1306)
       #undef HAS_LCD_CONTRAST
-    #endif  
+    #endif
   #endif
 
 #else // CONFIGURATION_LCD
@@ -285,13 +285,13 @@
 
   #define SERVO_LEVELING (defined(AUTO_BED_LEVELING_FEATURE) && defined(Z_ENDSTOP_SERVO_NR))
 
-   /**
-    * Sled Options
-    */ 
+  /**
+   * Sled Options
+   */
   #if ENABLED(Z_PROBE_SLED)
     #define Z_SAFE_HOMING
   #endif
-  
+
   /**
    * MAX_STEP_FREQUENCY differs for TOSHIBA
    */
@@ -405,6 +405,21 @@
   #define ARRAY_BY_EXTRUDERS1(v1) ARRAY_BY_EXTRUDERS(v1, v1, v1, v1)
 
   /**
+   * ARRAY_BY_HEATER_BLOCKS based on HEATER_BLOCKS
+   */
+  #if HEATER_BLOCKS > 3
+    #define ARRAY_BY_HEATER_BLOCKS(v1, v2, v3, v4) { v1, v2, v3, v4 }
+  #elif HEATER_BLOCKS > 2
+    #define ARRAY_BY_HEATER_BLOCKS(v1, v2, v3, v4) { v1, v2, v3 }
+  #elif HEATER_BLOCKS > 1
+    #define ARRAY_BY_HEATER_BLOCKS(v1, v2, v3, v4) { v1, v2 }
+  #else
+    #define ARRAY_BY_HEATER_BLOCKS(v1, v2, v3, v4) { v1 }
+  #endif
+
+  #define ARRAY_BY_HEATER_BLOCKS1(v1) ARRAY_BY_HEATER_BLOCKS(v1, v1, v1, v1)
+
+  /**
    * Shorthand for pin tests, used wherever needed
    */
   #define HAS_TEMP_0 (PIN_EXISTS(TEMP_0) && TEMP_SENSOR_0 != 0 && TEMP_SENSOR_0 != -2)
@@ -430,7 +445,6 @@
   #define HAS_SERVO_2 (PIN_EXISTS(SERVO2))
   #define HAS_SERVO_3 (PIN_EXISTS(SERVO3))
   #define HAS_FILAMENT_SENSOR (ENABLED(FILAMENT_SENSOR) && PIN_EXISTS(FILWIDTH))
-  #define HAS_FSR_SENSOR (ENABLED(FSR_Z_SENSOR) && PIN_EXISTS(FSR))
   #define HAS_FILRUNOUT (PIN_EXISTS(FILRUNOUT))
   #define HAS_HOME (PIN_EXISTS(HOME))
   #define HAS_KILL (PIN_EXISTS(KILL))
@@ -488,11 +502,11 @@
    * Helper Macros for heaters and extruder fan
    */
   #define WRITE_HEATER_0P(v) WRITE(HEATER_0_PIN, v)
-  #if EXTRUDERS > 1 || ENABLED(HEATERS_PARALLEL)
+  #if HEATER_BLOCKS > 1 || ENABLED(HEATERS_PARALLEL)
     #define WRITE_HEATER_1(v) WRITE(HEATER_1_PIN, v)
-    #if EXTRUDERS > 2
+    #if HEATER_BLOCKS > 2
       #define WRITE_HEATER_2(v) WRITE(HEATER_2_PIN, v)
-      #if EXTRUDERS > 3
+      #if HEATER_BLOCKS > 3
         #define WRITE_HEATER_3(v) WRITE(HEATER_3_PIN, v)
       #endif
     #endif

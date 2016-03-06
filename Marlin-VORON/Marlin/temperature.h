@@ -19,7 +19,7 @@
 */
 
 #ifndef TEMPERATURE_H
-#define TEMPERATURE_H 
+#define TEMPERATURE_H
 
 #include "Marlin.h"
 #include "planner.h"
@@ -32,20 +32,16 @@ void tp_init();  //initialize the heating
 void manage_heater(); //it is critical that this is called periodically.
 
 #if ENABLED(FILAMENT_SENSOR)
-// For converting raw Filament Width to milimeters 
- float analog2widthFil(); 
- 
-// For converting raw Filament Width to an extrusion ratio 
- int widthFil_to_size_ratio();
-#endif
+  // For converting raw Filament Width to milimeters
+  float analog2widthFil();
 
-#if ENABLED(FSR_Z_SENSOR)
- int fsrValue();
+  // For converting raw Filament Width to an extrusion ratio
+  int widthFil_to_size_ratio();
 #endif
 
 // low level conversion routines
 // do not use these routines and variables outside of temperature.cpp
-extern int target_temperature[4];  
+extern int target_temperature[4];
 extern float current_temperature[4];
 #if ENABLED(SHOW_TEMP_ADC_VALUES)
   extern int current_temperature_raw[4];
@@ -64,12 +60,12 @@ extern float current_temperature_bed;
 #if ENABLED(PIDTEMP)
 
   #if ENABLED(PID_PARAMS_PER_EXTRUDER)
-    extern float Kp[EXTRUDERS], Ki[EXTRUDERS], Kd[EXTRUDERS], Kc[EXTRUDERS]; // one param per extruder
+    extern float Kp[HEATER_BLOCKS], Ki[HEATER_BLOCKS], Kd[HEATER_BLOCKS], Kc[HEATER_BLOCKS]; // one param per extruder
     #define PID_PARAM(param,e) param[e] // use macro to point to array value
   #else
     extern float Kp, Ki, Kd, Kc; // one param per extruder - saves 20 or 36 bytes of ram (inc array pointer)
     #define PID_PARAM(param, e) param // use macro to point directly to value
-  #endif // PID_PARAMS_PER_EXTRUDER	
+  #endif // PID_PARAMS_PER_EXTRUDER
   float scalePID_i(float i);
   float scalePID_d(float d);
   float unscalePID_i(float i);
@@ -78,39 +74,57 @@ extern float current_temperature_bed;
 #endif
 
 #if ENABLED(PIDTEMPBED)
-  extern float bedKp,bedKi,bedKd;
+  extern float bedKp, bedKi, bedKd;
 #endif
-  
+
 #if ENABLED(BABYSTEPPING)
   extern volatile int babystepsTodo[3];
 #endif
-  
+
 //high level conversion routines, for use outside of temperature.cpp
 //inline so that there is no performance decrease.
 //deg=degreeCelsius
 
-FORCE_INLINE float degHotend(uint8_t extruder) { return current_temperature[extruder]; }
+FORCE_INLINE float degHotend(uint8_t extruder) {
+  #if HEATER_BLOCKS == 1
+    return current_temperature[0];
+  #else
+    return current_temperature[extruder];
+  #endif
+}
 FORCE_INLINE float degBed() { return current_temperature_bed; }
 
 #if ENABLED(SHOW_TEMP_ADC_VALUES)
-  FORCE_INLINE float rawHotendTemp(uint8_t extruder) { return current_temperature_raw[extruder]; }
-  FORCE_INLINE float rawBedTemp() { return current_temperature_bed_raw; }
+FORCE_INLINE float rawHotendTemp(uint8_t extruder) {
+  #if HEATER_BLOCKS == 1
+    return current_temperature_raw[0];
+  #else
+    return current_temperature_raw[extruder];
+  #endif
+}
+FORCE_INLINE float rawBedTemp() { return current_temperature_bed_raw; }
 #endif
 
-FORCE_INLINE float degTargetHotend(uint8_t extruder) { return target_temperature[extruder]; }
+FORCE_INLINE float degTargetHotend(uint8_t extruder) { 
+   #if HEATER_BLOCKS == 1
+    return target_temperature[0]; 
+  #else
+    return target_temperature[extruder]; 
+  #endif
+}
 FORCE_INLINE float degTargetBed() { return target_temperature_bed; }
 
 #if ENABLED(THERMAL_PROTECTION_HOTENDS)
-  void start_watching_heater(int e=0);
+  void start_watching_heater(int e = 0);
 #endif
 
-FORCE_INLINE void setTargetHotend(const float &celsius, uint8_t extruder) {
+FORCE_INLINE void setTargetHotend(const float& celsius, uint8_t extruder) {
   target_temperature[extruder] = celsius;
   #if ENABLED(THERMAL_PROTECTION_HOTENDS)
     start_watching_heater(extruder);
   #endif
 }
-FORCE_INLINE void setTargetBed(const float &celsius) { target_temperature_bed = celsius; }
+FORCE_INLINE void setTargetBed(const float& celsius) { target_temperature_bed = celsius; }
 
 FORCE_INLINE bool isHeatingHotend(uint8_t extruder) { return target_temperature[extruder] > current_temperature[extruder]; }
 FORCE_INLINE bool isHeatingBed() { return target_temperature_bed > current_temperature_bed; }
@@ -125,25 +139,20 @@ FORCE_INLINE bool isCoolingBed() { return target_temperature_bed < current_tempe
   FORCE_INLINE bool isHeatingHotend##NR() { return isHeatingHotend(NR); } \
   FORCE_INLINE bool isCoolingHotend##NR() { return isCoolingHotend(NR); }
 HOTEND_ROUTINES(0);
-#if EXTRUDERS > 1
+#if HEATER_BLOCKS > 1
   HOTEND_ROUTINES(1);
 #else
   #define setTargetHotend1(c) do{}while(0)
 #endif
-#if EXTRUDERS > 2
+#if HEATER_BLOCKS > 2
   HOTEND_ROUTINES(2);
 #else
   #define setTargetHotend2(c) do{}while(0)
 #endif
-#if EXTRUDERS > 3
+#if HEATER_BLOCKS > 3
   HOTEND_ROUTINES(3);
 #else
   #define setTargetHotend3(c) do{}while(0)
-#endif
-
-
-#if ENABLED(FSR_Z_SENSOR)
-  int fsrValue();
 #endif
 
 int getHeaterPower(int heater);
