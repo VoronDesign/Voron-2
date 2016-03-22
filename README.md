@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/mz_logo_color.png =250px)
+![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/mz_logo_color.png)
 # VORON #
 
 Firmware, plans, and parts for VORON RepRap printer
