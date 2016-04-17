@@ -5,6 +5,9 @@ Firmware, plans, and parts for VORON RepRap printer
 
 ## Updates: ##
 
+_Apr 17, 2016:_  
+REV B Carriage is up. Belt tensioning every each way. I've cleaned up the folder to get rid of some older stuff nobody should be using now anyway.
+
 _Apr 15, 2016:_  
 Quick update: The manual stalled out due to work on REV B of the X Carriage. At I started writing down the process, I became convinced belt tensioning is a thing that needs to happen. So I'm bringing back a version of what I had on the prototype printer. New carriage will also have a better way to mount a single E3D hot end, so you don't have to take apart X Carriage to remove it.
 
