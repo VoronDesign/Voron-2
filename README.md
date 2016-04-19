@@ -5,6 +5,9 @@ Firmware, plans, and parts for VORON RepRap printer
 
 ## Updates: ##
 
+_Apr 19, 2016:_  
+Updated the BOM to reflect the REV B components. Link updated.
+
 _Apr 17, 2016:_  
 REV B Carriage is up. Belt tensioning every each way. I've cleaned up the folder to get rid of some older stuff nobody should be using now anyway.  
 Description of changes here: http://imgur.com/a/EneHq
@@ -27,5 +30,5 @@ ver1.0 of the STLs has been released. Happy printing.
 
 ## BOM: ##
 
-[VORON BOM ver1.03](https://docs.google.com/spreadsheets/d/1CnjnCmzwoyHKUaXohrz3uQaha95N9MtXohGXAgyHPg4/edit#gid=506165466)  
+[VORON BOM ver1.05](https://docs.google.com/spreadsheets/d/150UXlhLpZNloG9lh2HoRCPmifi2T9qeGDGSNL4KMLVk/edit#gid=1645831751)  
 [VORON Flex Extruder BOM](https://docs.google.com/spreadsheets/d/16CWPB2oTK9FKjAUDDWl0jZJUkDyqz0WzneBYv2D0PWs/edit#gid=1031735707)
