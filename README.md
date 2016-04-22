@@ -1,9 +1,17 @@
 ![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/mz_logo_color.png)
 # VORON #
 
+Reddit: [/r/voroncorexy](https://www.reddit.com/r/voroncorexy/)
+
 Firmware, plans, and parts for VORON RepRap printer
 
 ## Updates: ##
+
+_Apr 22, 2016:_ 
+Massive update to the manual. All motion system are done. Next is filamnt systems, and wiring. 
+Also, added a BSP adapter for E3D Titan.
+
+In other news, we have a sub-reddit now! Link at the top of the page.
 
 _Apr 19, 2016:_  
 Updated the BOM to reflect the REV B components. Link updated.
