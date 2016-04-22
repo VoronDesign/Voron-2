@@ -7,7 +7,7 @@ Firmware, plans, and parts for VORON RepRap printer
 
 ## Updates: ##
 
-_Apr 22, 2016:_ 
+_Apr 22, 2016:_  
 Massive update to the manual. All motion system are done. Next is filamnt systems, and wiring. 
 Also, added a BSP adapter for E3D Titan.
 
