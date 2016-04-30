@@ -5,7 +5,14 @@ Reddit: [/r/voroncorexy](https://www.reddit.com/r/voroncorexy/)
 
 Firmware, plans, and parts for VORON RepRap printer
 
-## Updates: ##
+## Updates: ##  
+
+_Apr 30, 2016:_  
+REV C Parts are pushed (STL and STEP). Parts included in this release:  
+- Improved Bed Carriage  
+- V1-to-REV C leadscrew adapter (for those who already printed v1)  
+- Improved RAMPs Case  
+- Improved Power Box (and mirror of v1 as default)  
 
 _Apr 22, 2016:_  
 Massive update to the manual. All motion system are done. Next is filamnt systems, and wiring. 
