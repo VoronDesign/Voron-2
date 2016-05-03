@@ -1,6 +1,5 @@
-
-![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/Resources/img/mz_logo_color.png)
 # VORON  
+![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/Resources/img/voron_assembly.png)
 
 Reddit: [/r/voroncorexy](https://www.reddit.com/r/voroncorexy/)
 
