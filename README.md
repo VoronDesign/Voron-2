@@ -1,4 +1,10 @@
-![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/mz_logo_color.png)
+<style>
+body {
+	background-color: rgb(237,237,237);
+}
+</style>
+
+![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/Resources/img/mz_logo_color.png)
 # VORON  
 
 Reddit: [/r/voroncorexy](https://www.reddit.com/r/voroncorexy/)
