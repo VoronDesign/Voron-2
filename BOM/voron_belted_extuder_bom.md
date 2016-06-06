@@ -3,7 +3,7 @@ _Bowden Version_
 
 | Desctiption | MZBot PN | Source | Soutce PN | Qty |
 | --- | --- | --- | --- | --- |
-| 695-2RS Radial Ball Bearing | SP-HW-6952RS | Aliexpress | 695-2RS | 3 |
+| 625-2RS Radial Ball Bearing | SP-HW-6252RS | Aliexpress | 625-2RS | 3 |
 | GT2 Pulley | VB-LM-01-GTP1 | Aliexpress |  | 1 |
 | GT2 Belt Loop 188mm | SP-HW-01-GTBL | Aliexpress |  | 1 |
 | Spring 0.5" Long, 0.18" OD 0.024" Wire | SP-HW-SPB-1 | McMaster Carr | 9657K267 | 2 |
