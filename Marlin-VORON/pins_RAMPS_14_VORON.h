@@ -34,7 +34,7 @@
 
 // Fan Expansion board pins
 #define EXTRUDER_0_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
-#define EXTRUDER_1_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
+#define EXTRUDER_1_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan (same pin for both extruders since it's the same fan)
 
 #define FAN_PIN            		5 // Servo pin 5 for parts cooling pan
 
