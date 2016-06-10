@@ -47,7 +47,7 @@
 
 // Bed
 #define HEATER_BED_PIN   11   // Servo pin 11 to drive the SSR
-#define TEMP_BED_PIN     14   // T2 on RAMPs
+#define TEMP_BED_PIN     14   // T1 on RAMPs
 
 // LCD
 #define BEEPER_PIN 		 -1   // Disable Beeper Pin
