@@ -58,4 +58,3 @@
 |  | T Slot Nuts - M5 | VB-FR-01-TSN1 | Misumi | HNKK5-5 | 36 | 34 |
 |  | Torx tapping screws | VB-FR-01-TTS1 | Misumi | HTJ5 | 24 | 24 |
 |  |  |  |  |  |  |  |
-| Last Revision: | 6/16/2016 |  |  |  |  |  |
