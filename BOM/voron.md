@@ -9,7 +9,7 @@
 |  | GT2 Pulley - 20 tooth - 2mm pitch | VB-LM-01-GTP1 | Aliexpress |  | 2 | 2 |
 |  | F695ZZ - Flanged Ball Bearing | VB-LM-01-BBF1 | Aliexpress | F695ZZ | 16 | 16 |
 | Electronics | NEMA 17 Stepper | VB-EL-01-SM1 | OMC SteppersOnline | 17HS19-2004S | 2 | 2 |
-|  | NAME 17 Linear Stepper TR8x8 300mm (with nut) | VB-EL-01-LSM1 | Aliexpress | 42HS40-1004YAL | 2 | 2 |
+|  | NEMA 17 Linear Stepper TR8x8 300mm (with nut) | VB-EL-01-LSM1 | Aliexpress | 42HS40-1004YAL | 2 | 2 |
 |  | Full RAMPs 1.4 + LCD Kit + Drivers | VB-EL-01-RK1 | Aliexpress |  | 1 | 1 |
 |  | Endstop Microswitch | VB-EL-01-ESS1 | eBay | SPDT 1A 120V Short Lever | 2 | 2 |
 |  | 12V PSU 16.7A | VB-EL-01-PSU1 | Aliexpress | S-201-12 | 1 | 1 |
