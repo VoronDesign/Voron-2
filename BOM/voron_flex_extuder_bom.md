@@ -9,5 +9,4 @@ _Bowden Version_
 | M3 Hex Socket Screw 22mm | SP-HW-HSS-M3-22 | McMaster Carr | 91290A124 | 4 |
 | M4 Hex Socket Screw 14mm | SP-HW-HSS-M4-14 | McMaster Carr | 91290A150 | 1 |
 | M3 Hex Nut | VB-HW-HN-M3 | McMaster Carr | 98676A100 | 1 |
-| M5 Washer Steel | VB-HW-WST-M5 | McMaster Carr | 98269A440 | 2 |
 | M4 Hex Nut | SP-HW-HLN-M4 | McMaster Carr | 98676A200 | 2 |
