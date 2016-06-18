@@ -42,9 +42,3 @@ REV A STLs are published. Updated to the X Carriage to house a blower fan. Also 
 
 _Mar 8, 2016:_  
 ver1.0 of the STLs has been released. Happy printing.
-
-## BOM:
-
-You can find the latest BOM [here](https://github.com/dcousens/VORON/blob/patch-1/BOM/voron.md).
-
-The VORON Flex Extruder BOM can be [found separately here](https://docs.google.com/spreadsheets/d/16CWPB2oTK9FKjAUDDWl0jZJUkDyqz0WzneBYv2D0PWs/edit#gid=1031735707).
