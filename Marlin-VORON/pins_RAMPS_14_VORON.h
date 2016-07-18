@@ -39,8 +39,8 @@
 #define FAN_PIN            		5 // Servo pin 5 for parts cooling pan
 
 // Extruders
-#define HEATER_0_PIN     9   // D9 on RAMPs.  Extruder 1
-#define HEATER_1_PIN     10  // D10 on RAMPs. Extruder 2
+#define HEATER_0_PIN     10   // D10 on RAMPs. Extruder 1
+#define HEATER_1_PIN     9    // D9 on RAMPs.  Extruder 2
 
 #define TEMP_0_PIN       13   // T0 on RAMPs
 #define TEMP_1_PIN       15   // T2 on RAMPs
