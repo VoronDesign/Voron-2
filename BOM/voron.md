@@ -15,7 +15,7 @@
 | Linear Bearing (Double)                                 | VB-LM-01-LB2     | Misumi                       | LMUW8 (LM8LUU)             | 6   |
 | GT2 Belt - 6mm x 2mm pitch 1.5M long                    | VB-LM-01-GTB1    | Aliexpress                   |                            | 2   |
 | GT2 Pulley - 20 tooth - 2mm pitch                       | VB-LM-01-GTP1    | Aliexpress                   |                            | 2   |
-| NAME 17 Linear Stepper TR8x8 300mm (with nut)           | VB-EL-01-LSM1    | Aliexpress                   | 42HS40-1004YAL             | 2   |
+| NEMA 17 Linear Stepper TR8x8 300mm (with nut)           | VB-EL-01-LSM1    | Aliexpress                   | 42HS40-1004YAL             | 2   |
 | F695ZZ - Flanged Ball Bearing                           | VB-LM-01-BBF1    | Aliexpress                   | F695ZZ                     | 16  |
 
 ### Electronics  
@@ -25,7 +25,7 @@
 | Arduino MEGA2560 R3                                     | VB-EL-01-AM3     | Aliexpress                   | MEGA2560 R3                | 1   |
 | RAMPs 1.4 SP                                            | VB-EL-01-RSP     | StaticBoard                  |                            | 1   |
 | DRV8825 Drivers (set of 5)                              | VB-EL-01-DRV     | Aliexpress                   | DRV8825                    | 1   |
-| LCD Controller Full Graphics                            | VB-EL-01-LCD     | Aliexpress                   |                            |     |
+| LCD Controller Full Graphics                            | VB-EL-01-LCD     | Aliexpress                   |                            | 1   |
 | Endstop Microswitch (KW10 series)                       | VB-EL-01-ESS1    | Aliexpress                   | KW10                       | 2   |
 | 12V PSU 16.7A                                           | VB-EL-01-PSU1    | OMC SteppersOnline           | S-201-12                   | 1   |
 | 250V 10A 3pin IEC320 C14 Inlet w/ fuse and switch       | VB-EL-01-ISW1    | Amazon                       | C14                        | 1   |
@@ -59,10 +59,6 @@
 | 2M Ohm resistor (for inductive sensor)                  | VB-EL-01-R2M     | DigiKey                      | CF14JT2M00CT-ND            | 1   |
 | USB Cable                                               | VB-EL-01-USB     | CableMatters                 | 200001-BLK-6               | 1   |
 | C14 Power Cable (US)                                    | VB-EL-01-PC-US   | MONOPRICE                    | Product # 5279             | 1   |
-| LED Strip                                               | VB-EL-01-LED1    | Amazon                       |                            | 1   |
-| Thermal Protection Fuse (120C)                          | VB-EL-01-TPF1    | eBay                         | KSD301                     | 1   |
-| E3D Chimera Kit                                         | VB-EX-01-DHK1    | Filastruder                  |                            | 1   |
-| NEMA 17 Stepper                                         | VB-EL-01-LSM1    | OMC SteppersOnline           | 17HS19-2004S               | 2   |
 
 ### Electronics (Optional)  
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part #            | Qty |
