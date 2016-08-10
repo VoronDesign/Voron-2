@@ -138,16 +138,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.6046236"
-     inkscape:cx="326.86773"
-     inkscape:cy="732.72906"
+     inkscape:zoom="1.3023118"
+     inkscape:cx="567.97056"
+     inkscape:cy="734.10703"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="2020"
      inkscape:window-height="1097"
-     inkscape:window-x="503"
-     inkscape:window-y="74"
+     inkscape:window-x="273"
+     inkscape:window-y="53"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata10526">
@@ -157,7 +157,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -888,14 +888,14 @@
     <text
        sodipodi:linespacing="125%"
        id="text11435"
-       y="872.96924"
+       y="873.73712"
        x="523.89917"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:19.80375099px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface, Ultra-Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          sodipodi:role="line"
          id="tspan12139"
          x="523.89917"
-         y="872.96924">Dupont Connectors</tspan></text>
+         y="873.73712">Dupont Connectors</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path11439"
@@ -903,17 +903,17 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:19.80375099px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface, Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="534.78235"
-       y="336.34274"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface, Ultra-Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="537.08594"
+       y="333.27127"
        id="text11441"
        sodipodi:linespacing="125%"><tspan
-         y="336.34274"
-         x="534.78235"
+         y="333.27127"
+         x="537.08594"
          id="tspan11623"
          sodipodi:role="line">Molex MicroFit 3</tspan><tspan
-         y="361.09744"
-         x="534.78235"
+         y="355.14627"
+         x="537.08594"
          id="tspan11625"
          sodipodi:role="line">Connectors</tspan></text>
     <path
@@ -954,11 +954,11 @@
        sodipodi:linespacing="125%"
        id="text11435-7"
        y="831.43579"
-       x="497.72449"
-       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:19.80375099px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface, Ultra-Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="499.26022"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'.Helvetica Neue DeskInterface';-inkscape-font-specification:'.Helvetica Neue DeskInterface, Ultra-Light';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        xml:space="preserve"><tspan
          y="831.43579"
-         x="497.72449"
+         x="499.26022"
          id="tspan11615"
          sodipodi:role="line">2M Ohm resistor</tspan></text>
     <path
