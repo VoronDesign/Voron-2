@@ -26,7 +26,7 @@
 | RAMPs 1.4 SP                                            | VB-EL-01-RSP     | StaticBoard                  |                            | 1   |
 | DRV8825 Drivers (set of 5)                              | VB-EL-01-DRV     | Aliexpress                   | DRV8825                    | 1   |
 | LCD Controller Full Graphics                            | VB-EL-01-LCD     | Aliexpress                   |                            | 1   |
-| Endstop Microswitch (KW10 series)                       | VB-EL-01-ESS1    | Aliexpress                   | KW10                       | 2   |
+| Endstop Microswitch (KW10 series, hole distance 6.5mm)  | VB-EL-01-ESS1    | Aliexpress                   | KW10                       | 2   |
 | 12V PSU 16.7A                                           | VB-EL-01-PSU1    | OMC SteppersOnline           | S-201-12                   | 1   |
 | 250V 10A 3pin IEC320 C14 Inlet w/ fuse and switch       | VB-EL-01-ISW1    | Amazon                       | C14                        | 1   |
 | Bed Thermistor - M3 Hex Stud - EPOCS                    | VB-EL-01-TB1     | eBay                         |                            | 1   |
