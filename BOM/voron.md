@@ -77,8 +77,8 @@
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part #            | Qty |
 |---------------------------------------------------------|------------------|------------------------------|----------------------------|-----|
 | Aluminum Tooling Plate MIC-6 9x9x0.25 in                | VE-B-AL-9        | Campbell Tool & Metal Supply |                            | 1   |
-| PEI Sheet 0.4x9x9”                                      | VE-B-PEI-9       | IPI Plastics                 |                            | 1   |
-| 3M 468MP Adhesive 12x12                                 | VE-B-3M468-12    | Amazon                       | 12X12-6-468MP (Pack of 12) | 1   |
+| PEI Sheet 9x9x0.04 in                                   | VE-B-PEI-9       | IPI Plastics                 |                            | 1   |
+| 3M 468MP Adhesive 12x12 in                              | VE-B-3M468-12    | Amazon                       | 12X12-6-468MP (Pack of 12) | 1   |
 
 ### Hardware (KIT4)  
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part #            | Qty |
