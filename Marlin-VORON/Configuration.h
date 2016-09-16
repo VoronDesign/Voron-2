@@ -368,15 +368,15 @@
 //#define USE_ZMAX_PLUG
 
 // coarse Endstop Settings
-#define ENDSTOPPULLUPS // Comment this out (using // at the start of the line) to disable the endstop pullup resistors
+//#define ENDSTOPPULLUPS // Comment this out (using // at the start of the line) to disable the endstop pullup resistors
 
 #if DISABLED(ENDSTOPPULLUPS)
   // fine endstop settings: Individual pullups. will be ignored if ENDSTOPPULLUPS is defined
   //#define ENDSTOPPULLUP_XMAX
   //#define ENDSTOPPULLUP_YMAX
   //#define ENDSTOPPULLUP_ZMAX
-  //#define ENDSTOPPULLUP_XMIN
-  //#define ENDSTOPPULLUP_YMIN
+  #define ENDSTOPPULLUP_XMIN
+  #define ENDSTOPPULLUP_YMIN
   //#define ENDSTOPPULLUP_ZMIN
   //#define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
@@ -388,7 +388,7 @@ const bool Z_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 const bool X_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 const bool Y_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-//const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
+const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -604,7 +604,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
   //    O-- FRONT --+
   //  (0,0)
   #define X_PROBE_OFFSET_FROM_EXTRUDER 0  // X offset: -left  +right  [of the nozzle]
-  #define Y_PROBE_OFFSET_FROM_EXTRUDER -36  // Y offset: -front +behind [the nozzle]
+  #define Y_PROBE_OFFSET_FROM_EXTRUDER -49  // Y offset: -front +behind [the nozzle]
   #define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
   #define XY_TRAVEL_SPEED 9000         // X and Y axis travel speed between probes, in mm/min.
