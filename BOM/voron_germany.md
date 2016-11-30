@@ -96,7 +96,7 @@
 | M3 Hex Lock Nut                                         | VB-HW-HLN-M3     | Online-Schrauben.de          |                            | 4   |
 | M5 Hex Nut                                              | VB-HW-HN-M5      | Online-Schrauben.de          |                            | 2   |
 | M5 Washer Steel                                         | VB-HW-WST-M5     | Online-Schrauben.de          |                            | 2   |
-| No. 6 Washer Neoprene                                   | VB-HW-WNP-M3     | eBay(atters153)              | 401059266883               | 16  |
+| No. 6 Washer Neoprene                                   | VB-HW-WNP-M3     | eBay(atters153)              | 401059266883 alternative: 380673476442 3mmx1.5mm              | 16  |
 | M3 Washer Steel                                         | VB-HW-WST-M3     | Online-Schrauben.de          |                            | 4   |
 | Plastics screw No. 1 7/16”                              | VB-HW-PS-1       | Online-Schrauben.de          | e.g. DIN7981 2.2x13mm         | 4   |
 | Spring 1" L 0.408" OD                                   | VB-HW-SPB-1      | eBay(top-industrieteile)     | 122022700476 (1x 10x 25mm) | 4   |
