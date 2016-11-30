@@ -98,11 +98,11 @@
 | M5 Washer Steel                                         | VB-HW-WST-M5     | Online-Schrauben.de          |                            | 2   |
 | No. 6 Washer Neoprene                                   | VB-HW-WNP-M3     | eBay(atters153)              | 401059266883               | 16  |
 | M3 Washer Steel                                         | VB-HW-WST-M3     | Online-Schrauben.de          |                            | 4   |
-| Plastics screw No. 1 7/16”                              | VB-HW-PS-1       | Online-Schrauben.de          | I think 2.2 x 10mm         | 4   |
+| Plastics screw No. 1 7/16”                              | VB-HW-PS-1       | Online-Schrauben.de          | e.g. DIN7981 2.2x13mm         | 4   |
 | Spring 1" L 0.408" OD                                   | VB-HW-SPB-1      | eBay(top-industrieteile)     | 122022700476 (1x 10x 25mm) | 4   |
 | M3 Pressfit Threaded Insert                             | VB-HW-PFTI-M3    | eBay(gewindebohrerde)        | 331691172687               | 3   |
 | Drop-in T Slot Nuts - M5                                | VB-FR-01-TSN2    | eBay(cnc-zubehoer)           | 131647310693               | 36  |
-| Phillips #10-24 5/8” thread-rolling screws (DIN7500)    | VB-FR-01-PTS1    | Online-Schrauben.de          | Gewindefurchend mit Linsenkopf DIN7500| 24  |
+| Phillips #10-24 5/8” thread-rolling screws              | VB-FR-01-PTS1    | Online-Schrauben.de          | DIN7500 M5 16mm Form-M | 24  |
 
 ### Tools  
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part # / eBay #   | Qty |
