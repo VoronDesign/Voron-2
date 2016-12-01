@@ -31,9 +31,9 @@
 | 12V PSU 16.7A                                           | VB-EL-01-PSU1    | Amazon                       | B0191H4QC0                 | 1   |
 | 250V 10A 3pin IEC320 C14 Inlet w/ fuse and switch       | VB-EL-01-ISW1    | Amazon                       | B01HJ9WUIO                 | 1   |
 | Bed Harness Connector - Molex                           | VB-EL-01-BHC1    | Mouser                       | 538-76650-0065 (2 pack)    | 1   |
-| Silicone Heater 110V 250W                               | VB-EL-01-BH1     | Filafarm                     |                            | 1   |
+| Silicone Heater 230V 250W                               | VB-EL-01-BH1     | Filafarm                     |                            | 1   |
 | Bed Thermistor - M3 Hex Stud - EPOCS                    | VB-EL-01-TB1     | Filafarm (embedded in heater)|                            | 1   |
-| 110V SSR - Omron                                        | VB-EL-01-SSR1    | Filafarm                     |                            | 1   | 
+| 230V SSR                                                | VB-EL-01-SSR1    | Filafarm                     |                            | 1   | 
 | 2 pin Dupont jumper wire (12V supply for Fan Exp Baord) | VB-EL-01-FXW1    | eBay(eckstein_komponente)    | 271970160475               | 1   |
 | RAMPs Fan Expansion board                               | VB-EL-01-RFX1    | eBay(3dprintparts)           | 282246251601               | 1   |
 | 2 pin Dupont Connector (female set)                     | VB-EL-01-DC3     | eBay(eckstein_komponente)    | 282194267142(set of 10)    | 1   |
