@@ -1,21 +1,21 @@
 # How to build firmware for VORON
 
-**NOTE:** Current approved version of Marlin to work with these files is **1.1.0-RC6**
+**NOTE:** Current approved version of Marlin to work with these files is **1.1.0-RC8**
 
 We don't want to track yet another fork of Marlin here. Let them do their thing, and we'll stick with just the bits we care about.
 
 ## List of files and why they are here  
 
 **Configuration.h**  
-This is the main config. Starting with RC5, there are a lot of changes to this. I had to completely reset and populate this from scratch. They fixed several bugs in this release, a lot of which center around CoreXY. 
+Main config. **NOTE:** If using V1.5 hardware, uncomment the this line `#define VORON_NOZZLE_PROBE`
 
-**dogm_bitmaps.h**  
-MZBot logo on the LCD splash screen (totally optional, but looks cool)  
+**_Bootscreen.h**  
+LCD splash screen
 
 **pins.h**  
-Addition of RAMPS_14_VORON motherboard selector for use in Configuration.h  
+Addition of RAMPS_VORON motherboard selector for use in Configuration.h  
 
-**pins_RAMPS_14_VORON.h**  
+**pins_RAMPS_VORON.h**  
 Basic RAMPs 1.4 pins layout with VORON specific re-assignments. This file contains only what is different from stock, with explanations
 
 **ultralcd.cpp**   
@@ -24,6 +24,6 @@ Also added a "Re-home Z" action under the setting for Z-probe offset in Control-
 
 ## Getting the firmware and grafting on the changes
 
-1. Grab the latest supported release from Marlin GihHub. Current version we're working with is [RC6](https://github.com/MarlinFirmware/Marlin/tree/1.1.0-RC6)
+1. Grab the latest supported release from Marlin GihHub. Current version we're working with is [RC8](https://github.com/MarlinFirmware/Marlin/tree/1.1.0-RC8)
 2. Copy these file to the Marlin folder, overwriting exsisting files files
 3. Build, upload, enjoy

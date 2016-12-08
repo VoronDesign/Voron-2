@@ -27,14 +27,14 @@
  */
 
 // Include the base configuration for RAMPs 1.4
-#include "pins_RAMPS_14.h"
+#include "pins_RAMPS.h"
 
 #define CONTROLLERFAN_PIN  8 // D8 on RAMPs. Used for the fan to cool controller 
  							 // LED strip can be attached to the same output. This way LEDs are only on during printing, and shortly after
 
 // Fan Expansion board pins
-#define EXTRUDER_0_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
-#define EXTRUDER_1_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan (same pin for both extruders since it's the same fan)
+#define E0_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan
+#define E1_AUTO_FAN_PIN 6 // Servo pin 6 for E3D Fan (same pin for both extruders since it's the same fan)
 
 #define FAN_PIN            		5 // Servo pin 5 for parts cooling pan
 
