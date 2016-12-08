@@ -20,7 +20,7 @@ Basic RAMPs 1.4 pins layout with VORON specific re-assignments. This file contai
 
 **ultralcd.cpp**   
 Addition of "Lower Bed" option in the main menu. Drops the bed by 20mm. Useful when removing parts, or in emergencies.  
-Also added a "Re-home Z" action under the setting for Z-probe offset in Control->Motion menu. It re-homes Z (G28 Z0), and lowers the nozzle to Z0.0 This allows you to easilty dial in the nozzle offset. Tweak the value, rehome Z, rinse, repeat until perfect. Don't forget to heat up your nozzle first ;)
+Also added a "Re-home Z" action under the setting for Z-probe offset in Control->Motion menu. It re-homes Z (G28 Z0), and lowers the nozzle to Z0.0 This allows you to easilty dial in the nozzle offset. Tweak the value, rehome Z, rinse, repeat until perfect. If using V1.5 hardware, you can dial this in with a cold (and clean) nozzle.
 
 ## Getting the firmware and grafting on the changes
 
