@@ -8,9 +8,9 @@ mm_per_arc_segment                           0.5              # Arcs are cut int
 
 # Arm solution configuration. Translates mm positions into stepper positions
 arm_solution                                 corexy
-alpha_steps_per_mm                           80               # Steps per mm for alpha stepper
-beta_steps_per_mm                            80               # Steps per mm for beta stepper
-gamma_steps_per_mm                           400              # Steps per mm for gamma stepper
+alpha_steps_per_mm                           160              # Steps per mm for alpha stepper
+beta_steps_per_mm                            160              # Steps per mm for beta stepper
+gamma_steps_per_mm                           800              # Steps per mm for gamma stepper
 
 # Planner module configuration : Look-ahead and acceleration configuration
 planner_queue_size                           32               # DO NOT CHANGE THIS UNLESS YOU KNOW EXACTLY WHAT YOUR ARE DOING
@@ -26,21 +26,21 @@ base_stepping_frequency                      100000           # Base frequency f
 
 # Stepper module pins ( ports, and pin numbers, appending "!" to the number will invert a pin )
 alpha_step_pin                               2.1              # Pin for alpha stepper step signal
-alpha_dir_pin                                0.11             # Pin for alpha stepper direction
-alpha_en_pin                                 0.10            # Pin for alpha enable pin 0.10
+alpha_dir_pin                                0.11!            # Pin for alpha stepper direction
+alpha_en_pin                                 0.10             # Pin for alpha enable pin 0.10
 alpha_current                                1.0              # X stepper motor current
 x_axis_max_speed                             30000            # mm/min
 alpha_max_rate                               30000.0          # mm/min actuator max speed
 
 beta_step_pin                                2.2              # Pin for beta stepper step signal
-beta_dir_pin                                 0.20             # Pin for beta stepper direction
+beta_dir_pin                                 0.20!            # Pin for beta stepper direction
 beta_en_pin                                  0.19             # Pin for beta enable
 beta_current                                 1.0              # Y stepper motor current
 y_axis_max_speed                             30000            # mm/min
 beta_max_rate                                30000.0          # mm/min actuator max speed
 
 gamma_step_pin                               2.3              # Pin for gamma stepper step signal
-gamma_dir_pin                                0.22             # Pin for gamma stepper direction
+gamma_dir_pin                                0.22!            # Pin for gamma stepper direction
 gamma_en_pin                                 0.21             # Pin for gamma enable
 gamma_current                                1.0              # Z stepper motor current
 z_axis_max_speed                             300              # mm/min
@@ -54,7 +54,7 @@ second_usb_serial_enable                     false            # This enables a s
 
 # Extruder module configuration
 extruder.hotend.enable                          true             # Whether to activate the extruder module at all. All configuration is ignored if false
-extruder.hotend.steps_per_mm                    467.29           # Steps per mm for extruder stepper
+extruder.hotend.steps_per_mm                    934.58           # Steps per mm for extruder stepper
 extruder.hotend.default_feed_rate               600              # Default rate ( mm/minute ) for moves where only the extruder moves
 extruder.hotend.acceleration                    500              # Acceleration for the stepper motor mm/sec²
 extruder.hotend.max_speed                       50               # mm/s
@@ -79,7 +79,7 @@ delta_current                                   1.0             # Extruder stepp
 
 # Second extruder module configuration
 extruder.hotend2.enable                          true             # Whether to activate the extruder module at all. All configuration is ignored if false
-extruder.hotend2.steps_per_mm                    467.29           # Steps per mm for extruder stepper
+extruder.hotend2.steps_per_mm                    934.58           # Steps per mm for extruder stepper
 extruder.hotend2.default_feed_rate               600              # Default rate ( mm/minute ) for moves where only the extruder moves
 extruder.hotend2.acceleration                    500              # Acceleration for the stepper motor, as of 0.6, arbitrary ratio
 extruder.hotend2.max_speed                       50               # mm/s
@@ -110,9 +110,9 @@ temperature_control.hotend.set_m_code           104             #
 temperature_control.hotend.set_and_wait_m_code  109             #
 temperature_control.hotend.designator           T0              #
 
-#temperature_control.hotend.p_factor             13.7            #
-#temperature_control.hotend.i_factor             0.097           #
-#temperature_control.hotend.d_factor             24              #
+#temperature_control.hotend.p_factor             42.6026         #
+#temperature_control.hotend.i_factor             2.4449          #
+#temperature_control.hotend.d_factor             185.5874        #
 
 #temperature_control.hotend.max_pwm              64              # max pwm, 64 is a good value if driving a 12v resistor with 24v.
 
@@ -126,16 +126,15 @@ temperature_control.hotend2.set_m_code          104             #
 temperature_control.hotend2.set_and_wait_m_code 109             #
 temperature_control.hotend2.designator          T1              #
 
-#temperature_control.hotend2.p_factor            13.7            # permanently set the PID values after an auto pid
-#temperature_control.hotend2.i_factor            0.097           #
-#temperature_control.hotend2.d_factor            24              #
+#temperature_control.hotend2.p_factor            42.6026         # permanently set the PID values after an auto pid
+#temperature_control.hotend2.i_factor            2.4449          #
+#temperature_control.hotend2.d_factor            185.5874        #
 
 #temperature_control.hotend2.max_pwm          64               # max pwm, 64 is a good value if driving a 12v resistor with 24v.
 
 # Bed temperature control configuration
 temperature_control.bed.enable                true             #
 temperature_control.bed.thermistor_pin        0.24             #
-#temperature_control.bed.heater_pin           2.7              # using BED mosfet to drive SSR
 temperature_control.bed.heater_pin            1.20             # using SERVO1 pins to drive SSR
 temperature_control.bed.thermistor            EPCOS100K        # see http://smoothieware.org/temperaturecontrol#toc5
 #temperature_control.bed.beta                  4066             # or set the beta value
@@ -144,20 +143,25 @@ temperature_control.bed.set_m_code           140              #
 temperature_control.bed.set_and_wait_m_code  190              #
 temperature_control.bed.designator           B                #
 
-#temperature_control.bed.max_pwm             64               # max pwm, 64 is a good value if driving a 12v resistor with 24v.
+#temperature_control.bed.p_factor             137.3264         # permanently set the PID values after an auto pid
+#temperature_control.bed.i_factor             3.5902           #
+#temperature_control.bed.d_factor             1313.1838        #
+
+temperature_control.bed.max_pwm              205              # VORON: Do not use max power on the silicone bed
 
 # Switch module for fan control
-switch.fan.enable                            true             #
+switch.fan.enable                            true             # VORON: Part cooling fan
 switch.fan.input_on_command                  M106             #
 switch.fan.input_off_command                 M107             #
 switch.fan.output_pin                        1.21             #
 
-switch.misc.enable                           true             #
+switch.misc.enable                           true             # VORON: Hotend cooling fan (temperature controlled)
 switch.misc.input_on_command                 M42              #
 switch.misc.input_off_command                M43              #
 switch.misc.output_pin                       1.19             #
+switch.misc.ignore_on_halt                   true             # make sure hotend fan does not turn off on HALT condition
 
-# VORON: manually enable the RAMPS cooling fan with M80 at the start of printing, and M81 at the end
+# VORON: manually enable the RAMPS cooling fan with M106.1 at the start of printing, and M107.1 at the end
 switch.ramps.enable                          true
 switch.ramps.output_pin                      2.7              # VORON: using BED output for RAMPS cooling fan
 switch.ramps.input_on_command                M106
@@ -169,9 +173,9 @@ switch.ramps.subcode                         1
 temperatureswitch.hotend.enable              true             #
 temperatureswitch.hotend.designator          T                # first character of the temperature control designator to use as the temperature sensor to monitor
 temperatureswitch.hotend.switch              misc             # select which switch to use, matches the name of the defined switch
-temperatureswitch.hotend.threshold_temp      60.0             # temperature to turn on (if rising) or off the switch
-temperatureswitch.hotend.heatup_poll         15               # poll heatup at 15 sec intervals
-temperatureswitch.hotend.cooldown_poll       60               # poll cooldown at 60 sec intervals
+temperatureswitch.hotend.threshold_temp      50.0             # temperature to turn on (if rising) or off the switch
+temperatureswitch.hotend.heatup_poll         5                # poll heatup at 5 sec intervals
+temperatureswitch.hotend.cooldown_poll       15               # poll cooldown at 15 sec intervals
 
 # filament out detector
 #filament_detector.enable                     true             #
@@ -196,8 +200,8 @@ beta_min_endstop                             1.26^            #
 beta_homing_direction                        home_to_min      #
 beta_min                                     0                #
 beta_max                                     230              #
-gamma_min_endstop                            1.29!^           #
-#gamma_max_endstop                           1.29^            #
+#gamma_min_endstop                            1.29!^           #
+gamma_min_endstop                            nc
 gamma_homing_direction                       home_to_min      #
 gamma_min                                    0                #
 gamma_max                                    230              #
@@ -233,7 +237,7 @@ leveling-strategy.three-point-leveling.enable         true        # a leveling s
 leveling-strategy.three-point-leveling.point1         100.0,50.0  # the first probe point (x,y) optional may be defined with M557
 leveling-strategy.three-point-leveling.point2         180.0,200.0 # the second probe point (x,y)
 leveling-strategy.three-point-leveling.point3         20.0,200.0  # the third probe point (x,y)
-leveling-strategy.three-point-leveling.home_first     true        # home the XY axis before probing
+leveling-strategy.three-point-leveling.home_first     false       # home the XY axis before probing
 leveling-strategy.three-point-leveling.tolerance      0.03        # the probe tolerance in mm, anything less that this will be ignored, default is 0.03mm
 leveling-strategy.three-point-leveling.probe_offsets  -9,-50,0    # the probe offsets from nozzle, must be x,y,z, default is no offset
 leveling-strategy.three-point-leveling.save_plane     false       # set to true to allow the bed plane to be saved with M500 default is false
