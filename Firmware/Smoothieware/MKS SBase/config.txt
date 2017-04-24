@@ -7,7 +7,7 @@
 
 # Serial communications configuration ( baud rate default to 9600 if undefined )
 uart0.baud_rate                              115200           # Baud rate for the default hardware serial port
-second_usb_serial_enable                     false            # This enables a second usb serial port (to have both pronterface and a terminal connected)
+second_usb_serial_enable                     true             # This enables a second usb serial port (to have both pronterface and a terminal connected)
 #msd_disable                                 false            # disable the MSD (USB SDCARD) when set to true
 
 # Robot module configurations : general handling of movement G-codes and slicing into moves
@@ -38,21 +38,21 @@ base_stepping_frequency                      100000           # Base frequency f
 alpha_step_pin                               2.0              # Pin for alpha stepper step signal
 alpha_dir_pin                                0.5              # Pin for alpha stepper direction
 alpha_en_pin                                 0.4              # Pin for alpha enable pin 0.10
-alpha_current                                1.0              # X stepper motor current
+alpha_current                                1.5              # X stepper motor current
 x_axis_max_speed                             30000            # mm/min
 alpha_max_rate                               30000.0          # mm/min actuator max speed
 
 beta_step_pin                                2.1              # Pin for beta stepper step signal
 beta_dir_pin                                 0.11             # Pin for beta stepper direction
 beta_en_pin                                  0.10             # Pin for beta enable
-beta_current                                 1.0              # Y stepper motor current
+beta_current                                 1.5              # Y stepper motor current
 y_axis_max_speed                             30000            # mm/min
 beta_max_rate                                30000.0          # mm/min actuator max speed
 
 gamma_step_pin                               2.2              # Pin for gamma stepper step signal
 gamma_dir_pin                                0.20!            # Pin for gamma stepper direction
 gamma_en_pin                                 0.19             # Pin for gamma enable
-gamma_current                                1.0              # Z stepper motor current
+gamma_current                                1.5              # Z stepper motor current
 z_axis_max_speed                             300              # mm/min
 gamma_max_rate                               300.0            # mm/min actuator max speed
 
@@ -90,9 +90,8 @@ extruder.hotend2.y_offset                       18.0          # y offset from or
 extruder.hotend.z_offset                        0             # z offset from origin in mm
 extruder.hotend2.z_offset                       0             # z offset from origin in mm
 
-delta_current                                   1.0           # Extruder stepper motor current
-epsilon_current                                 1.0           # Second extruder stepper motor current
-
+delta_current                                   1.5           # Extruder stepper motor current
+epsilon_current                                 1.5           # Second extruder stepper motor current
 
 # laser module configuration
 laser_module_enable                           false           # Whether to activate the laser module at all. All configuration is ignored if false.
