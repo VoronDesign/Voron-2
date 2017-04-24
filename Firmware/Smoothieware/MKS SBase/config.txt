@@ -145,6 +145,18 @@ temperature_control.hotend.max_pwm              255           # max pwm, 64 is a
 temperature_control.hotend2.max_pwm             255           # max pwm, 64 is a good value if driving a 12v resistor with 24v.
 temperature_control.bed.max_pwm                 205           # VORON: Do not use max power on the silicone bed
 
+temperature_control.hotend.max_temp             260
+temperature_control.hotend2.max_temp            260
+temperature_control.bed.max_temp                130
+
+temperature_control.hotend.runaway_heating_timeout   180
+temperature_control.hotend2.runaway_heating_timeout  180
+temperature_control.bed.runaway_heating_timeout      180
+
+temperature_control.hotend.runaway_range        15
+temperature_control.hotend2.runaway_range       15
+temperature_control.bed.runaway_range           15
+
 temperature_control.bed.pwm_frequency           20
 
 # Switch module for fan control
