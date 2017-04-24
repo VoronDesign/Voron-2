@@ -306,12 +306,13 @@ panel.bed_temperature                        65                # temp to set bed
 #custom_menu.power_off.command                M81               #
 
 # network settings
-network.enable                                false             # enable the ethernet network services
-#network.webserver.enable                     true              # enable the webserver
-#network.telnet.enable                        true              # enable the telnet server
-#network.plan9.enable                         true              # enable the plan9 network filesystem
-#network.ip_address                           192.168.0.202     # the IP address
-#network.ip_mask                              255.255.255.0     # the ip mask
-#network.ip_gateway                           192.168.0.1       # the gateway address
+network.enable                                true              # enable the ethernet network services
+network.webserver.enable                      true              # enable the webserver
+network.telnet.enable                         true              # enable the telnet server
+network.plan9.enable                          false             # enable the plan9 network filesystem
+network.ip_address                            192.168.0.202     # the IP address
+network.ip_mask                               255.255.255.0     # the ip mask
+network.ip_gateway                            192.168.0.1       # the gateway address
+network.hostname                              voron
 
 return_error_on_unhandled_gcode               false             #
