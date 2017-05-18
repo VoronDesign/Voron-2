@@ -1,0 +1,32 @@
+M83
+G91			; Relative
+G1 E-5.0 F3600		; Retract filament
+G1 Z0.75 F6000		; Lower bed
+G90			; Absolute
+G1 X0 Y130 F4000	; Move to back of bed
+G4 S2			; Wait 2 seconds
+G91			; Relative
+G1 Z-0.75 F4500		; Raise bed
+G1 E4.9 F1200		; Extrude filament
+G90			; Absolute
+T1			; Change tool
+
+G4 S4			; Wait 4 seconds
+
+M83
+G91			; Relative
+G1 E-5.0 F3600		; Retract filament
+G1 Z0.75 F6000		; Lower bed
+G90			; Absolute
+G1 X0 Y130 F4000	; Move to back of bed
+G4 S2			; Wait 2 seconds
+G91			; Relative
+G1 Z-0.75 F4500		; Raise bed
+G1 E4.9 F1200		; Extrude filament
+G90			; Absolute
+T0			; Change tool
+
+G4 S4			; Wait 4 seconds
+
+
+
