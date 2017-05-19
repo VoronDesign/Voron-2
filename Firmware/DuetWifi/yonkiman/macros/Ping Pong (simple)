@@ -1,0 +1,19 @@
+M83
+G1 E-5.0 F3600		; Retract filament
+G4 S2			; Wait 2 seconds
+G1 E4.9 F1200		; Extrude filament
+
+T1			; Change tool
+
+G4 S4			; Wait 4 seconds
+
+G1 E-5.0 F3600		; Retract filament
+G4 S2			; Wait 2 seconds
+G1 E4.9 F1200		; Extrude filament
+
+T0			; Change tool
+
+G4 S4			; Wait 4 seconds
+
+
+
