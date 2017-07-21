@@ -102,7 +102,6 @@
 | Spring 1" L 0.408" OD                                   | VB-HW-SPB-1      | eBay(top-industrieteile)     | 122022700476 (1x 10x 25mm) | 4   |
 | M3 Pressfit Threaded Insert                             | VB-HW-PFTI-M3    | eBay(gewindebohrerde)        | 331691172687               | 3   |
 | Drop-in T Slot Nuts - M5 for 6mm slot                   | VB-FR-01-TSN2    | eBay(cnc-zubehoer)           | 131647310693               | 36  |
-| Phillips #10-24 5/8” thread-rolling screws              | VB-FR-01-PTS1    | Online-Schrauben.de          | DIN7500 M5 16mm Form-M | 24  |
 
 ### Tools  
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part # / eBay #   | Qty |
