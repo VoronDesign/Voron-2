@@ -83,7 +83,7 @@
 ### Hardware (KIT4)  
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part # / eBay #   | Qty |
 |---------------------------------------------------------|------------------|------------------------------|----------------------------|-----|
-| M5 Cap Socket Screw 10mm                                | VB-HW-CSS-M5-10  | Online-Schrauben.de          | Cap = Linsenkopf           | 36  |
+| M5 Cap Socket Screw 8mm                                 | VB-HW-CSS-M5-08  | Online-Schrauben.de          | Cap = Linsenkopf           | 36  |
 | M5 Cap Socket Screw 30mm                                | VB-HW-CSS-M5-30  | Online-Schrauben.de          | Cap = Linsenkopf           | 6   |
 | M3 Hex Socket Screw 20mm                                | VB-HW-HSS-M3-20  | Online-Schrauben.de          | Hex = Zylinderkopf         | 9   |
 | M3 Hex Socket Screw 30mm                                | VB-HW-HSS-M3-30  | Online-Schrauben.de          | Hex = Zylinderkopf         | 5   |
