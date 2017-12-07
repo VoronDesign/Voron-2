@@ -1,10 +1,10 @@
 # VORON BOM  
 
 ### Frame  
-| Description                                             | MZBot Part #     | Supplier                     | Supplier Part # / eBay #   | Qty |
-|---------------------------------------------------------|------------------|------------------------------|----------------------------|-----|
-| 2020 Extrusion - Black - 370mm                          | VB-FR-01-EXT1    | SMT Montagetechnik           | S1052020SCH                | 12  |
-| Cube Corner Bracket                                     | VB-FR-01-CB1     | SMT Montagetechnik           | S205VS202020               | 8   |
+| Description                                                   | MZBot Part #     | Supplier                     | Supplier Part # / eBay #   | Qty |
+|---------------------------------------------------------------|------------------|------------------------------|----------------------------|-----|
+| 2020 Extrusion - Black - 370mm, 6mm slot, for M6 in end-holes | VB-FR-01-EXT1    | SMT Montagetechnik           | S106B2020                | 12  |
+| Cube Corner Bracket, with M6 screw                            | VB-FR-01-CB1     | SMT Montagetechnik           | S206WV20203DS               | 8   |
 
 
 ### Linear Motion  
@@ -83,7 +83,7 @@
 ### Hardware (KIT4)  
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part # / eBay #   | Qty |
 |---------------------------------------------------------|------------------|------------------------------|----------------------------|-----|
-| M5 Cap Socket Screw 10mm                                | VB-HW-CSS-M5-10  | Online-Schrauben.de          | Cap = Linsenkopf           | 36  |
+| M5 Cap Socket Screw 8mm                                 | VB-HW-CSS-M5-08  | Online-Schrauben.de          | Cap = Linsenkopf           | 36  |
 | M5 Cap Socket Screw 30mm                                | VB-HW-CSS-M5-30  | Online-Schrauben.de          | Cap = Linsenkopf           | 6   |
 | M3 Hex Socket Screw 20mm                                | VB-HW-HSS-M3-20  | Online-Schrauben.de          | Hex = Zylinderkopf         | 9   |
 | M3 Hex Socket Screw 30mm                                | VB-HW-HSS-M3-30  | Online-Schrauben.de          | Hex = Zylinderkopf         | 5   |
@@ -101,8 +101,7 @@
 | Plastics screw No. 1 7/16”                              | VB-HW-PS-1       | Online-Schrauben.de          | e.g. DIN7981 2.2x13mm         | 4   |
 | Spring 1" L 0.408" OD                                   | VB-HW-SPB-1      | eBay(top-industrieteile)     | 122022700476 (1x 10x 25mm) | 4   |
 | M3 Pressfit Threaded Insert                             | VB-HW-PFTI-M3    | eBay(gewindebohrerde)        | 331691172687               | 3   |
-| Drop-in T Slot Nuts - M5                                | VB-FR-01-TSN2    | eBay(cnc-zubehoer)           | 131647310693               | 36  |
-| Phillips #10-24 5/8” thread-rolling screws              | VB-FR-01-PTS1    | Online-Schrauben.de          | DIN7500 M5 16mm Form-M | 24  |
+| Drop-in T Slot Nuts - M5 for 6mm slot                   | VB-FR-01-TSN2    | eBay(cnc-zubehoer)           | 131647310693               | 36  |
 
 ### Tools  
 | Description                                             | MZBot Part #     | Supplier                     | Supplier Part # / eBay #   | Qty |
