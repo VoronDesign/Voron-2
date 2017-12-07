@@ -1,4 +1,4 @@
-###VORON 1.0 -> 1.5 XY Gantry Upgrade BOM
+# VORON 1.0 -> 1.5 XY Gantry Upgrade BOM
 
 | Description  | Supplier  | Supplier Part #  | Qty  |
 |--------------|-----------|------------------|------|
