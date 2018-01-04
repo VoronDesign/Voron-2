@@ -1,6 +1,8 @@
 ## VORON2 Accent Color Parts List
 
-Suggested alternative color partss
+Suggested alternative color parts
+
+
 
 
 * toothed_idler
