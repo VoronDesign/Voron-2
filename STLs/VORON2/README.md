@@ -1,0 +1,30 @@
+## VORON2 Accent Color Parts List
+
+Suggested alternative color partss
+
+
+* toothed_idler
+
+X Carriage
+* belt_clips_x2
+* cable_cover_latch
+
+AB Drive Modules
+* drive_module_idler (all 3 parts)
+* drive_module_tensioner_dial
+
+Front Panel Locks
+* lock_lever (a and b)
+
+Base Compartment
+* mzbot_logo_insert
+
+LCD
+* jog_dial
+* swing arms
+
+Mobius
+* idler_arm
+* tenstioner_dial
+* jog_dial
+
