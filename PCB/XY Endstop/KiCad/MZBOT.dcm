@@ -1,0 +1,163 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP A1319
+D Linear Hall-Effect Sensor ICs with Analog Output 
+K Hall Effect, Magnetic
+$ENDCMP
+#
+$CMP AP2127N-3.3TRG1
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 1.2V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP C
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP CONN_01X04
+D Connector 01x04
+$ENDCMP
+#
+$CMP C_0402
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP C_0603
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP C_0805
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP C_1206
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP C_1210
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP LED_0805
+D Led
+$ENDCMP
+#
+$CMP LED_DUAL
+D Led
+$ENDCMP
+#
+$CMP LM193
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP LM293
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP LM393
+D Dual Voltage Comparator
+K Comp
+F ns/lm193.pdf
+$ENDCMP
+#
+$CMP MMBT2222
+D 40V Vce, 1A Ic, NPN, General Purpose Transistor, TO-92
+K NPN Transistor
+F http://www.fairchildsemi.com/ds/PN/PN2222A.pdf
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP R_0402
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP R_0603
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP R_0805
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP R_1206
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP R_1210
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP TLV70013DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 1.3V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70015DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 1.5V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70018DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 1.8V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70019DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 1.9V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70025DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 2.5V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70030DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 3.0V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70032DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 3.2V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70033DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TLV70036DDC
+D 200 mA Low Dropout Voltage Regulator, Fixed Output 3.6V, SOT-23-5
+K 200mA LDO Regulator Fixed Positive
+F http://www.ti.com/lit/ds/symlink/tlv70025.pdf
+$ENDCMP
+#
+$CMP TRIMPOT
+D Potentionmetre
+K R
+$ENDCMP
+#
+#End Doc Library
