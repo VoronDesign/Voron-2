@@ -27,6 +27,6 @@ LCD
 
 Mobius
 * idler_arm
-* tenstioner_dial
+* tensioner_dial
 * jog_dial
 
