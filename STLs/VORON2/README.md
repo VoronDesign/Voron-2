@@ -1,3 +1,5 @@
+****PLEASE NOTE THAT V2 IS STILL IN ACTIVE DEVELOPMENT/TESTING. PRINT PARTS AT YOUR OWN RISK.****
+
 ## VORON2 Accent Color Parts List
 
 Suggested alternative color parts
