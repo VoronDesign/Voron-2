@@ -42,19 +42,18 @@ M569 P8 S1 ; Z++ motor direction
 M569 P3 S0 ; E0 motor direction
 M569 P4 S1 ; E1 motor direction
 M569 P2 S1 ; E2 motor direction
-M906 X1200 Y1200 Z1200 E800 I40 ; motor drive currents
+M906 X1200 Y1200 Z1200 E1200 I50 ; motor drive currents
 M84 S10 ; motor idle timeout
 M350 X16 Y16 Z16 E16 I1 ; set microstepping
 M92 X160 Y160 Z320 E604 ; set microsteps per mm
-M203 X18000 Y18000 Z6000 E6000 ; set maximum rates
-M201 X1200 Y1200 Z500 E6000 ; set maximum acceleration (mm/min)
+M203 X18000 Y18000 Z6000 E9000 ; set maximum rates
+M201 X1800 Y1800 Z500 E6000 ; set maximum acceleration (mm/s/min)
 M566 X360 Y360 Z120 E1200 ; set maximum jerk
 
 
 ; firmware retraction
 
-M207 S3.0 R0.0 F6000 Z0.10
-M572 D0:1 S0.00
+M98 Pset_retract_quiet.g
 
 
 ; thermal
@@ -76,7 +75,7 @@ M106 P1 T40:70 H1:2 ; hotend fan
 
 ; M303 H1 S235 ; run autotune
 ; M500 to save autotune results to config-override.g
-M307 H0 A159.5 C243.7 D1.4 S1.00 V24.1 B0
+M307 H0 A300.4 C567.1 D1.2 S1.00 V24.1 B0
 M307 H1 A470.0 C233.7 D5.7 S1.00 V24.0 B0
 
 

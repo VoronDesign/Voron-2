@@ -5,5 +5,5 @@
 ; so this file never has to change.
 ; Tune the Z-value in the "slow" file.
 
-M558 P7 H5 F1800 T6000
+M558 P7 H5 R0.1 F1800 T6000 A1
 G31 P1000 X0 Y0 Z0
