@@ -1,6 +1,4 @@
-M83 ; relative extruder
-G1 E-3 F3600
-G91 ; relative positioning
-G1 Z5 F360
-G90 ; absolute positioning
-G1 X240 Y240 F6000
+G10                     ; retract as configured
+G91                     ; relative positioning
+G1 Z5 F6000             ; move up slightly
+M98 P"moveto_park_xy.g" ; and run away
