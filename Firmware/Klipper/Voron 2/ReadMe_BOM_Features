@@ -1,5 +1,10 @@
 Klipper on a Voron 2 - By Maglin
 
+This is using Klipper from : https://github.com/cruwaller/klipper
+OctoPi : https://github.com/guysoft/OctoPi
+
+Follow instructions on both to install.
+
 List of contents
 1. What is needed - BOM
 2. Features confirmed working
