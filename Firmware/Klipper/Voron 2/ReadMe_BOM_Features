@@ -30,7 +30,13 @@ List of contents
 	- Pressure advance that works amazingly
 	- OctoPrint control
 	- Wireless conetivity
+	- Inductive Probe and Mechanical Z switch working
+	- Start and End slicer scripts now in the config
+		- Just use print_start and print_end in your slicer and change the config to
+			behave how you want it to
 	- (New features added if requrested and able to be done)
 	
 	
 3. Wiring diagram to come down the road
+	- The current config file is pretty well commented as to what is plugged in where
+	
