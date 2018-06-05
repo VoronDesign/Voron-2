@@ -1,6 +1,6 @@
 # VORON  
 
-[]()
+![](https://github.com/mzbotreprap/VORON/blob/V2.0/Voron2.jpg)
 
 [Voron 2.0 Interlude](https://goo.gl/UtR1JU)  
 
