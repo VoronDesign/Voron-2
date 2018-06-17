@@ -1,1 +1,1 @@
-M98 P"homezm.g"
+M98 P"/macros/homing/homezm.g"

@@ -1,7 +1,7 @@
 ;; Macro to be called manually from the slicer code at the end of a print
 
-M98 P"homing_zhop_up.g"
-M98 P"moveto_park_xy.g"
+M98 P"/macros/homing/scripts/zhop_up.g"
+M98 P"/macros/moveto/park_xy.g"
 M400                    ; wait for moves to complete
 
 M140 R45                ; set bed standby temperature to magic PEI part removal temp
