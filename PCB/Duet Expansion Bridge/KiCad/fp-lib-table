@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name Voron)(type KiCad)(uri "$(KIPRJMOD)")(options "")(descr ""))
-)
