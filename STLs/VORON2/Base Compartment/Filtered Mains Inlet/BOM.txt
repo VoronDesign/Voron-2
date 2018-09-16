@@ -1,5 +1,0 @@
-1x: mains_plug_panel_filter+cherry.STL
-1x: ZF - WRG32F2FBBNN: Rocker Switches DPST BLK 16A ON-OFF
-1x: TE - 6EGG1-2: AC Power Entry Modules 6A DUAL FUSE LO LEAK
-2x: Cartridge Fuses (They are in parallel in the filter, keep that in mind)
-2x: Self Tapping Screws (Best fit you have on hand that is countersunk)
