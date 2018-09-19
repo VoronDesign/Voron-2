@@ -1,0 +1,202 @@
+
+# This is a Voron V1.5 specific cfg file  with pressure advance modified on 180718 by Michael Lanfranconi
+# This file serves as documentation for config parameters of corexy
+# style printers. One may copy and edit this file to configure a new
+# corexy printer. Only parameters unique to corexy printers are
+# described here - see the "example.cfg" file for description of
+# common config parameters.
+
+# DO NOT COPY THIS FILE WITHOUT CAREFULLY READING AND UPDATING IT
+# FIRST. Incorrectly configured parameters may cause damage.
+
+# The stepper_x section is used to describe the X axis as well as the
+# stepper controlling the X+Y movement.
+[stepper_x]
+step_pin: ar54
+dir_pin: ar55
+enable_pin: !ar38
+step_distance: .0125
+endstop_pin: ^ar3
+position_endstop: 0
+position_max: 270
+#I am using a 270 x 270mm build plate
+homing_speed: 50
+
+# The stepper_y section is used to describe the Y axis as well as the
+# stepper controlling the X-Y movement.
+[stepper_y]
+step_pin: ar60
+dir_pin: ar61
+enable_pin: !ar56
+step_distance: .0125
+endstop_pin: ^ar14
+position_endstop: 0
+position_max: 270
+#I am using a 270 x 270mm build plate
+homing_speed: 50
+
+
+ 
+[stepper_z] 
+step_pin: ar46
+dir_pin: ar48
+enable_pin: !ar62
+step_distance: .00125
+#Careful: I am using a TR8x4 leadscrew compared to the standard TR8x8
+endstop_pin: ^ar18
+position_endstop: -0.77
+position_max: 270
+#I am using a 270mm build height
+position_min: -1
+
+
+
+#[probe]
+#pin: ^ar18
+#   Probe detection pin. This parameter must be provided.
+#z_offset:-1
+#   The distance (in mm) between the bed and the nozzle when the probe
+#   triggers. This parameter must be provided.
+#speed: 5.0
+#   Speed (in mm/s) of the Z axis when probing. The default is 5mm/s.
+
+
+
+[extruder]
+step_pin: ar26
+dir_pin: !ar28
+enable_pin: !ar24
+step_distance: 0.001645
+# I am using the Voron belted Extruder
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+max_extrude_cross_section:65 
+#Cross_section Value is set deliberately high due to a stationary purge during startup routine
+max_extrude_only_velocity: 65
+max_extrude_only_accel: 5000
+#This is necessary due to the high max_extrude_cross_section. otherwise retract/pressure advance acceleration is too high.
+pressure_advance: 0.175
+#   The amount of raw filament to push into the extruder during
+#   extruder acceleration. An equal amount of filament is retracted
+#   during deceleration. It is measured in millimeters per
+#   millimeter/second. The default is 0, which disables pressure
+#   advance.
+pressure_advance_lookahead_time: 0.010
+#   A time (in seconds) to "look ahead" at future extrusion moves when
+#   calculating pressure advance. This is used to reduce the
+#   application of pressure advance during cornering moves that would
+#   otherwise cause retraction followed immediately by pressure
+#   buildup. This setting only applies if pressure_advance is
+#   non-zero. The default is 0.010 (10 milliseconds).
+#
+heater_pin: ar10
+sensor_type: ATC Semitec 104GT-2
+sensor_pin: analog13
+control: pid
+pid_Kp: 22.2
+pid_Ki: 1.08
+pid_Kd: 114
+min_temp: 0
+max_temp: 250
+
+
+[extruder1]
+step_pin: ar36
+dir_pin: ar34
+enable_pin: !ar30
+step_distance: 0.001645
+nozzle_diameter: 0.600
+filament_diameter: 1.750
+#pressure_advance: 0.0
+#   The amount of raw filament to push into the extruder during
+#   extruder acceleration. An equal amount of filament is retracted
+#   during deceleration. It is measured in millimeters per
+#   millimeter/second. The default is 0, which disables pressure
+#   advance.
+#pressure_advance_lookahead_time: 0.010
+#   A time (in seconds) to "look ahead" at future extrusion moves when
+#   calculating pressure advance. This is used to reduce the
+#   application of pressure advance during cornering moves that would
+#   otherwise cause retraction followed immediately by pressure
+#   buildup. This setting only applies if pressure_advance is
+#   non-zero. The default is 0.010 (10 milliseconds).
+#
+heater_pin: ar9
+sensor_type: ATC Semitec 104GT-2
+sensor_pin: analog15
+control: pid
+pid_Kp: 22.2
+pid_Ki: 1.08
+pid_Kd: 114
+min_temp: 0
+max_temp: 250
+
+
+[heater_bed]
+heater_pin: ar11
+sensor_type: NTC 100K beta 3950
+sensor_pin: analog14
+control: watermark
+min_temp: 0
+max_temp: 130
+
+[fan]
+pin: ar5
+
+# Heater cooling fans (one may define any number of sections with a
+# "heater_fan" prefix). A "heater fan" is a fan that will be enabled
+# whenever its associated heater is active. In the event of an MCU
+# software error the heater_fan will be set to its max_power.
+
+[heater_fan extruder]
+# See the "fan" section for fan configuration parameters.
+pin: ar6
+# The remaining variables are specific to heater_fan.
+heater: extruder
+#   Name of the config section defining the heater that this fan is
+#   associated with.  The default is "extruder".
+heater_temp: 50.0
+#   A temperature (in Celsius) that the heater must drop below before
+#   the fan is disabled. The default is 50 Celsius.
+fan_speed: 1.0
+#   The fan speed (expressed as a value from 0.0 to 1.0) that the fan
+#   will be set to when its associated heater is enabled. The default
+#   is 1.0
+
+#[heater_fan Extruder1]
+# See the "fan" section for fan configuration parameters.
+#pin: ar6
+# The remaining variables are specific to heater_fan.
+#heater: extruder1
+#   Name of the config section defining the heater that this fan is
+#   associated with.  The default is "extruder".
+#heater_temp: 50.0
+#   A temperature (in Celsius) that the heater must drop below before
+#   the fan is disabled. The default is 50 Celsius.
+#fan_speed: 1.0
+#   The fan speed (expressed as a value from 0.0 to 1.0) that the fan
+#   will be set to when its associated heater is enabled. The default
+#   is 1.0
+
+[heater_fan electronics_fan]
+pin: ar8
+
+[mcu]
+serial: /dev/ttyACM0
+pin_map: arduino
+
+[printer]
+kinematics: corexy
+#   This option must be "corexy" for corexy printers.
+max_velocity: 300
+max_accel: 3000
+max_z_velocity: 25
+max_z_accel: 30
+
+# "RepRapDiscount 128x64 Full Graphic Smart Controller" type displays
+[display]
+lcd_type: st7920
+cs_pin: ar16
+sclk_pin: ar23
+sid_pin: ar17
+
