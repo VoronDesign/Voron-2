@@ -44,8 +44,8 @@ M569 P8 S0      ; Z++ motor direction
 M569 P3 S0      ; E0 motor direction
 M569 P4 S0      ; E1 motor direction
 M569 P2 S0      ; E2 motor direction
-M84 S3600                           ; motor idle timeout
-M906 I50                            ; motor idle current percentage
+M84 S86400                          ; motor idle timeout
+M906 I0                             ; motor idle current percentage
 M350 X16 Y16 Z16 E16 I1             ; set microstepping
 M92 X80 Y80 Z400 E560               ; set microsteps per mm for 1.8-degree steppers
 
@@ -57,11 +57,12 @@ M98 P"/macros/drive/e_fullcurrent.g"
 
 ;; firmware retraction -------------------------------------
 
-;; Choose one as your default:
-M98 P"/macros/retraction/quiet_nozhop.g
-;M98 P"/macros/retraction/quiet_zhop.g
-;M98 P"/macros/retraction/pa_nozhop.g"
-;M98 P"/macros/retraction/pa_zhop.g"
+;; To support changing toolheads and firmware retraction profiles,
+;; the firmware retraction parameters are stored in
+;; /macros/retraction/*.g
+;; Running those scripts will write back to the /sys/restore_retraction.g file.
+;; We run that file on startup, which enables retraction selection to be maintained across reboots.
+M98 P"/sys/restore_retraction.g"
 
 
 ;; thermal -------------------------------------------------
@@ -94,17 +95,21 @@ M305 P102 S"Duex Drivers"               ; name and enable display of Duex steppe
 
 M106 P0 S0 ; C"Part" ; don't name part fan or it will show up twice in the UI
 M106 P1 T40:70 H1:2 C"Tool"
-M106 P2 T45:65 H100:101:102 C"Electronics"
+M106 P2 T35:55 H100:101:102 B1.0 L0.2 C"Electronics"
 M106 P3 S0 C"Chamber"
 ;M106 P8 B0 L0 S0.2 C"Lights"
 
-;; M303 H1 S235 ; run autotune
-;; M500 to save autotune results to config-override.g, then move the heater config lines from config-override.g here (or to a tool heater config macro).
-;; (Delete them from config-override.g, or you will be confused when changing this file doesn't work.)
+;; Bed autotune
+;; M303 H0 S100
+;; Show parameters
+;; M307 H0
 M307 H0 A271.6 C790.8 D1.6 S1.00 V24.3 B0
 
-M98 P"/macros/heating/toolhead_V6_copper_36W.g"
-;M98 P"/macros/heating/toolhead_Volcano_alu_36W.g"
+;; To support changing toolheads, the tool heater parameters are stored in
+;; /macros/heating/toolhead_*.g
+;; Running those scripts will write back to the /sys/restore_tool_heater.g file.
+;; We run that file on startup, which enables tool heater selection to be maintained across reboots.
+M98 P"/sys/restore_tool_heater.g"
 
 
 ;; tools ---------------------------------------------------
@@ -112,11 +117,11 @@ M98 P"/macros/heating/toolhead_V6_copper_36W.g"
 M563 P0 D0 H1       ; bind tool 0 to drive and heater
 G10 P0 X0 Y0 Z0     ; tool offset
 G10 P0 S0 R0        ; tool active and standby temp
-;M591 D0 P2 C3       ; filament detector
+;M591 D0 P2 C3 S1    ; filament detector
 
 ;M563 P1 D1 H2      ; bind tool 1 to drive and heater
 ;G10 P1 X0 Y0 Z0    ; tool offset
 ;G10 P1 S0 R0       ; tool active and standby temp
-;M591 D1 P2 C4      ; filament detector
+;M591 D1 P2 C4 S1    ; filament detector
 
 T0                  ; activate tool 0

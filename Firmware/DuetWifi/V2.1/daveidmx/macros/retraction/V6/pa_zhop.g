@@ -6,5 +6,10 @@
 ;;
 ;; *ADJUST* based on your retraction tuning WITH pressure advance
 
-M207 S3.0 R0.0 F3600 Z0.00
+M207 S3.0 R0.0 F3600 Z0.20
 M572 D0:1 S0.10
+
+;; Save retraction selection to be recovered on reboot
+M28 "/sys/restore_retraction.g"
+M98 P"/macros/retraction/v6/pa_zhop.g"
+M29
