@@ -2,6 +2,9 @@
 ;; Used to finely calibrate levels
 ;; after using "fast" to quickly get down to approximate bed height.
 ;;
+;; This "slow" configuration uses a shallwer dive height so that leveling will be faster
+;; on the assumption that a "fast" pass has been run first for coarse correction.
+;;
 ;; NOTE: This probe Z offset is associated with the carriage and not the nozzle.
 ;; Leave the Z-offset at Z0 because it does not indicate nozzle level.
 ;; Only adjust it if "/macros/homing/homezi.g" (or the inductive z-homing macro)

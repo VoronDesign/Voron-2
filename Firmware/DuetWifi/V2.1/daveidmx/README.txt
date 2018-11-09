@@ -47,3 +47,11 @@ Changes:
 * Make toolhead heater and firmware retraction profile selections sticky across reboots to support changing toolheads.
 * Add retraction profiles for Volcano.
 * Increased motor default idle timeout to 24 hours.
+
+* IMPORTANT: Changed origin coordinates to be at bed center.
+* Move toolhead thermistor parameters to the heating/toolhead_* scripts, because they change when you swap toolheads.
+* Turn off extruder in print_end.g
+* Set the tool to standby temperature (via deselection) when pausing.
+* Added a heatbreak thermistor setting.
+* Add calibrate_mswitch.g script to help calibrate the mechanical Z offset.
+* Add coarse_level.g script to level the gantry for when the default dive height is too small.

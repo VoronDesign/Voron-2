@@ -8,4 +8,4 @@
 ;; *ADJUST* these coordinates based on your bed size
 
 G90                             ; absolute positioning
-G0 X225 Y205 F99999             ; move just inside the back-left corner, subtracting probe offset
+G0 X100 Y080 F99999             ; move just inside the back-left corner, subtracting probe offset

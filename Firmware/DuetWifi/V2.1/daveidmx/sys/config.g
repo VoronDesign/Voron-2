@@ -13,11 +13,11 @@ M83             ; relative extruder coordinates
 ;; geometry ------------------------------------------------
 
 M667 S1                 ; corexy mode
-M208 X0 Y0 Z0 S1        ; S1 = set axes minima
-M208 X250 Y250 Z250 S0  ; S0 = set axes maxima
+M208 X-125 Y-125 Z0 S1        ; S1 = set axes minima
+M208 X129 Y129 Z250 S0  ; S0 = set axes maxima
 M574 X2 Y2 Z0 S0        ; endstops
 
-M557 X25:225 Y25:225 S50    ; configure z probing grid for mesh compensation
+M557 X-100:100 Y-100:100 S50    ; configure z probing grid for mesh compensation
                             ; (not used normally, but configures probing for the graphical bed report)
 
 M98 P"/macros/zprobe/use_mfast.g"
@@ -33,7 +33,7 @@ M98 P"/macros/zprobe/use_ifast.g"
 ;;  Z0 Z1
 
 M584 X0 Y1 Z5:6:7:8 E3:4:2                  ; motor bindings
-M671 X-55:310:-55:310 Y0:0:330:330 S20    ; Z drive positions
+M671 X-180:185:-180:185 Y-125:-125:205:205 S20    ; Z drive positions
 
 M569 P0 S0      ; X motor direction
 M569 P1 S0      ; Y motor direction
@@ -75,11 +75,19 @@ M98 P"/sys/restore_retraction.g"
 ;; E3D thermistor
 ;;   R4700 T100000 B4725 C7.06E-8
 
+;; Sample thermistor values:
+;; China thermistor (TL, Keenovo, etc.)
+;;   R4700 T100000 B395
+;; E3D thermistor
+;;   R4700 T100000 B4725 C7.06E-8
+
 M305 P0 R4700 T100000 B3950             ; bed thermistor
 M143 H0 S120                            ; bed cutoff temp
 M570 H0 T10 S180                        ; heater fault timeout
 
-M305 P1 R4700 T100000 B4725 C7.06E-8    ; tool 0 thermistor
+; NOTE: tool thermistor M305 is now specified by the tool heater script
+;M305 P1 R4700 T100000 B4725 C7.06E-8    ; tool 0 thermistor
+;M305 P1 R4700 T100000 B3950             ; tool 0 thermistor
 M143 H1 S280                            ; tool 0 temp cutoff
 M570 H1 T10 S120                        ; heater fault timeout
 
@@ -93,6 +101,8 @@ M570 H1 T10 S120                        ; heater fault timeout
 M305 P101 S"Duet Drivers"               ; name and enable display of Duet stepper drivers
 M305 P102 S"Duex Drivers"               ; name and enable display of Duex stepper drivers
 
+;M305 P103 X4 R4700 T100000 B3950 S"Heatbreak"    ; heatbreak thermistor
+
 M106 P0 S0 ; C"Part" ; don't name part fan or it will show up twice in the UI
 M106 P1 T40:70 H1:2 C"Tool"
 M106 P2 T35:55 H100:101:102 B1.0 L0.2 C"Electronics"
@@ -103,7 +113,7 @@ M106 P3 S0 C"Chamber"
 ;; M303 H0 S100
 ;; Show parameters
 ;; M307 H0
-M307 H0 A271.6 C790.8 D1.6 S1.00 V24.3 B0
+M307 H0 A271.6 C790.8 D3.2 S1.00 V24.3 B0
 
 ;; To support changing toolheads, the tool heater parameters are stored in
 ;; /macros/heating/toolhead_*.g

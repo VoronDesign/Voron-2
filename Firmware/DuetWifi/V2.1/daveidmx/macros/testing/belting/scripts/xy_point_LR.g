@@ -1,4 +1,4 @@
 ;; *ADJUST* this corner position to be ~25 from the edge of your range.
 
 G90             ; absolute positioning
-G0 X25 Y225
+G0 X-100 Y100

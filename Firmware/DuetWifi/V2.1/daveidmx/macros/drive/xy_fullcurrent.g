@@ -12,4 +12,4 @@ M906 X1200 Y1200          ; motor drive current
 
 M203 X18000 Y18000      ; maximum speed (mm/min)
 M201 X1200 Y1200        ; maximum acceleration (mm/min/s)
-M566 X180 Y180          ; instantaneous speed change (mm/min)
+M566 X360 Y360          ; instantaneous speed change (mm/min)

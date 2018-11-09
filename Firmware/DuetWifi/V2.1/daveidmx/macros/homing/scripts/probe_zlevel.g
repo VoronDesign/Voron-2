@@ -5,7 +5,7 @@
 ;; *ADJUST* H-values if your probe consistently triggers at different offsets per point
 ;; i.e. if "level" leaves you with a consistent gantry tilt.
 
-G30 P0 X050 Y050 Z-10000 H+0.00
-G30 P1 X200 Y050 Z-10000 H+0.00
-G30 P2 X200 Y200 Z-10000 H+0.00
-G30 P3 X050 Y200 Z-10000 H+0.00 S
+G30 P0 X-75 Y-75 Z-10000 H+0.00
+G30 P1 X+75 Y-75 Z-10000 H+0.00
+G30 P2 X+75 Y+75 Z-10000 H+0.00
+G30 P3 X-75 Y+75 Z-10000 H+0.00 S
