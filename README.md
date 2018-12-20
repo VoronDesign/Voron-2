@@ -1,6 +1,5 @@
-# VORON  
-![](https://raw.githubusercontent.com/mzbotreprap/VORON/master/Resources/img/voron_assembly.png)
+![](http://www.vorondesign.com/images/voron_design_logo.png)
 
-Reddit: [/r/voroncorexy](https://www.reddit.com/r/voroncorexy/)
+For more information, please visit [www.vorondesign.com](http://www.vorondesign.com)
 
-Firmware, plans, and parts for VORON RepRap printer
+![](http://www.vorondesign.com/images/voron2.1.jpg)
