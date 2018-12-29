@@ -1,3 +1,0 @@
-; Load filament
-G1 E400 F3600
-M84 P3 E0:1		; turn extruder motors off so the user can feed by hand
