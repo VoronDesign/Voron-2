@@ -8,5 +8,5 @@
 ;;
 ;; !!! This is the only place to edit overall Z-height !!!
 
-M558 P7 I0 H5 R0.1 F120 T99999 A5 S0.01 B1
+M558 P7 I1 H5 R0.1 F120 T99999 A5 S0.01 B0
 G31 P1000 X0 Y0 Z2.00

@@ -1,9 +1,9 @@
-;; Activate the inductive probe in "slow" mode.
-;; Used to finely calibrate levels
-;; after using "fast" to quickly get down to approximate bed height.
+;; Activate the inductive probe in "fast" mode.
+;; Used to quickly get down to bed level.
+;; Follow this up with a slow probe to finely calibrate levels.
 ;;
-;; This "slow" configuration uses a shallwer dive height so that leveling will be faster
-;; on the assumption that a "fast" pass has been run first for coarse correction.
+;; This "fast" configuration uses a higher dive height so that the gantry can be rough-leveled quickly
+;; before switching to slow-probing with a smaller dive height.
 ;;
 ;; NOTE: This probe Z offset is associated with the carriage and not the nozzle.
 ;; Leave the Z-offset at Z0 because it does not indicate nozzle level.
@@ -19,5 +19,5 @@
 ;; *ADJUST* this file for:
 ;;  Your inductive probe pins ("M558 P*")
 
-M558 P5 I1 H5 R0.1 F120 T99999 A5 S0.01 B1
+M558 P5 I1 H10 R0.1 F1800 T99999 A1 B0
 G31 P1000 X0 Y25 Z0

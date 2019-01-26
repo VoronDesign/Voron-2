@@ -8,5 +8,5 @@
 ;; *ADJUST* this file for:
 ;;  Your mechanical switch pins ("M558 P*")
 
-M558 P7 I0 H5 R0.1 F1800 T99999 A1 B1
+M558 P7 I1 H5 R0.1 F600 T99999 A1 B0
 G31 P1000 X0 Y0 Z0

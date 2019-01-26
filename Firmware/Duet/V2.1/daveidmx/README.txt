@@ -55,3 +55,6 @@ Changes:
 * Added a heatbreak thermistor setting.
 * Add calibrate_mswitch.g script to help calibrate the mechanical Z offset.
 * Add coarse_level.g script to level the gantry for when the default dive height is too small.
+
+* Changing Z endstop configuration for FSR.
+* No longer turning off heaters during Z probing. It turns out it's both unnecessary and actually detrimental due to the temperature delta.
