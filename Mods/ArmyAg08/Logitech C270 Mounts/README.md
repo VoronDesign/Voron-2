@@ -12,3 +12,6 @@ To run the cable down the extrusion, you can either use this [cable cover](https
  * 1x M3x8 SHCS
  * 1x M3x16 SHCS
  * 1x M3 T-nut
+
+ ![Camera Mount](Logitech_C270_Mount.jpg)
+
