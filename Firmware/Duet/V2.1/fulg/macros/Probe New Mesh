@@ -1,0 +1,9 @@
+; home + level first
+;G32
+
+; probe the bed using the piezo sensor
+M98 P"/macros/print_scripts/z_current_low.g"
+M98 P"/macros/probe_scripts/activate_z_nozzle.g"
+G29
+M98 P"/macros/probe_scripts/activate_z_probe.g"
+M98 P"/macros/print_scripts/z_current_high.g"

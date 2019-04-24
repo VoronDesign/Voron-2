@@ -9,6 +9,6 @@
 ; B1:       Turn off heaters while probing
 
 M400
-M558 P7 I1 F420 H5 T18000 A10 S0.01 B0 R0.2
-G31 T7 P500 X0 Y0 Z-0.75 ; Set parameters for z switch (more negative = higher nozzle)
+M558 P7 I0 F420 H5 T18000 A10 S0.01 B0 R0.2
+G31 T7 P500 X0 Y0 Z2.915 ; Set parameters for z switch (more negative = higher nozzle)
 G4 P200

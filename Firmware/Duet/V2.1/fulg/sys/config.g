@@ -20,8 +20,6 @@ M574 X2 Y2 Z0 S1 ; Set active high for x and y, no Z endstop
 
 ; Zprobe
 M98 P"/macros/probe_scripts/activate_z_probe.g"
-;M98 P"/macros/probe_scripts/activate_z_switch.g"
-;G31 T7 P100 X0 Y0 Z-0.005 ; Set parameters for Piezo board connected to Z endstop
 
 ; --- drive map ---
 ;    _______
@@ -32,8 +30,8 @@ M98 P"/macros/probe_scripts/activate_z_probe.g"
 ;     front
 
 ; Drive directions
-M569 P0 S1 ; A
-M569 P1 S1 ; B
+M569 P0 S1 ; A          ; todo, fix the wiring... A & B should be the same
+M569 P1 S0 ; B
 M569 P3 S1 ; Extruder #1
 M569 P4 S0 ; Extruder #2
 M569 P5 S0 ; Z1
@@ -45,7 +43,6 @@ M569 P8 S1 ; Z4
 M584 X0 Y1 Z5:6:7:8 E3:4
 M350 X16 Y16 Z16 E16:16 I1 ; Configure microstepping with interpolation
 ;M350 Z16 I0 ; disable Z interpolation
-;M92 X160 Y160 Z400 E564.786:564.786 ; Set steps per mm
 M92 X160 Y160 Z400 E560:560 ; Set steps per mm
 
 ; Accelerations and speed
@@ -58,8 +55,8 @@ M207 S4 F9000 T6000 Z0.5 		; Set Firmware Retraction
 M98 P"/macros/print_scripts/xy_current_high.g"	; XY (AB) currents high
 M98 P"/macros/print_scripts/z_current_high.g"   ; Z currents high
 M906 E1000                                      ; E current
-;M84 S60                                         ; Set idle timeout
-M84 S0
+M906 I30                                        ; idle current percentage
+M84 S120                                        ; Set idle timeout
 
 ; Bed Heater
 M305 P0 R4700 T100000 B3950                     ; Set thermistor + ADC parameters for heater 0
@@ -109,6 +106,7 @@ M586 P2 S0         ; Disable Telnet
 ; Fans
 M106 P3 S1 I0 F20 H1 T50 ; Hotend fan, 20 Hz, turns on if temperature sensor 1 reaches 50 degrees
 M106 P4 S0 I0 F250 H-1   ; Part cooling fan 250 hz, no thermostatic control
+;M106 P5 T45:65 F50 H100:101:102 ; Electronics bay fan, turn on gradually if MCU is over 45C or any TMC driver is over temp
 
 ; Bed
 M671 X-65:-65:365:365 Y-20:380:380:-20 S20 ; Define z belt locations (Front_Left, Back_Left, Back_Right, Front_Right)

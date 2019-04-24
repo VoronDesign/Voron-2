@@ -7,9 +7,6 @@ M561
 ; Home all axes
 G28
 
-;M98 P"/macros/print_scripts/goto_bucket.g"
-;M98 P"/macros/print_scripts/nozzle_wipe.g"
-
 ; Activate the z probe and lower the z motor currents
 M98 P"/macros/probe_scripts/activate_z_probe.g"
 M98 P"/macros/print_scripts/z_current_low.g"
@@ -36,9 +33,11 @@ M98 P"/macros/probe_scripts/goto_bed_center.g"
 ; Restore normal speed & accel
 M98 P"/macros/print_scripts/speed_printing.g"
 
-; Restore high current and select z switch
+; Restore high current and make sure Z probe is active
 M98 P"/macros/print_scripts/xy_current_high.g"
 M98 P"/macros/print_scripts/z_current_high.g"
-;M98 P"/macros/probe_scripts/activate_z_switch.g"
+
 M98 P"/macros/probe_scripts/activate_z_probe.g"
 
+; Apply saved heightmap
+G29 S1
