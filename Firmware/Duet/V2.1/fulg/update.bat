@@ -5,3 +5,4 @@ del .\sys\*.bak
 del .\sys\*.bin
 del .\sys\heightmap.csv
 del .\sys\dwc2settings.json
+del .\sys\resurrect.g

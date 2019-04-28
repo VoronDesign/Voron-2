@@ -1,9 +1,14 @@
-; home + level first
-;G32
+; give one last chance to cancel...
+M291 P"Did you level the gantry?" S3
+
+; ignore current heightmap
+M561
 
 ; probe the bed using the piezo sensor
 M98 P"/macros/print_scripts/z_current_low.g"
 M98 P"/macros/probe_scripts/activate_z_nozzle.g"
 G29
-M98 P"/macros/probe_scripts/activate_z_probe.g"
 M98 P"/macros/print_scripts/z_current_high.g"
+;M98 P"/macros/probe_scripts/activate_z_switch.g"
+
+M98 P"/macros/probe_scripts/goto_bed_center.g"

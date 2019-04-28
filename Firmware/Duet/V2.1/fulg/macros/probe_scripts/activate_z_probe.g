@@ -10,5 +10,5 @@
 
 M400
 M558 P8 I0 T18000 F120 H5 A10 S0.01 B0 R0.2
-G31 T8 P500 X0 Y25 Z3.15 ; inductive probe offset
+G31 T8 P500 X0 Y25 Z3.15 ; inductive probe offset, not critical, only used for coarse homing
 G4 P200

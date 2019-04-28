@@ -110,11 +110,10 @@ M106 P4 S0 I0 F250 H-1   ; Part cooling fan 250 hz, no thermostatic control
 
 ; Bed
 M671 X-65:-65:365:365 Y-20:380:380:-20 S20 ; Define z belt locations (Front_Left, Back_Left, Back_Right, Front_Right)
-;M557 X20:280 Y10:290 S40                   ; Define mesh grid
-M557 X25:275 Y40:290 S50                   ; Define mesh grid
+M557 X25:275 Y25:275 S50                   ; Define mesh grid
 
 ; Pressure advance
-;M572 D0 S0.3
+;M572 D0 S0.22
 
 M501  ; load config-override.g
 T0    ; select tool 0

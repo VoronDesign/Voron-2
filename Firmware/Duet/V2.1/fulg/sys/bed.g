@@ -24,7 +24,7 @@ M98 P"/sys/bed_probe_points.g"
 M98 P"/sys/bed_probe_points.g"
 
 ; Repeat right away for more precision
-;M98 P"/sys/bed_probe_points.g"
+M98 P"/sys/bed_probe_points.g"
 
 ; Final Z height adjust
 M98 P"/macros/print_scripts/z_switch_probe.g"
@@ -37,7 +37,7 @@ M98 P"/macros/print_scripts/speed_printing.g"
 M98 P"/macros/print_scripts/xy_current_high.g"
 M98 P"/macros/print_scripts/z_current_high.g"
 
-M98 P"/macros/probe_scripts/activate_z_probe.g"
+;M98 P"/macros/probe_scripts/activate_z_probe.g"
 
 ; Apply saved heightmap
 G29 S1
