@@ -34,11 +34,11 @@ If you already used the VORON profile for a while, you likely changed some parts
 
 You can reset everything if you delete all VORON-related `.cfg` files inside these directories:
 ```
-definition_changes
-extruders
-machine_instances
-quality_changes
-user
+...\definition_changes
+...\extruders
+...\machine_instances
+...\quality_changes
+...\user
 ```
 
 As usual, make a backup first of your Cura profile to make sure you don't lose anything.
