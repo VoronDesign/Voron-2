@@ -1,6 +1,6 @@
 # README.md
 
-## Bottom Stiffener Brackets
+## Bottom Stiffener Corner Brackets
 
 These brackets replace the lower Z-axis endstops and also include two additional M3 mounting holes with gusseting to affix to the rails by way of two additional T-nuts. This should serve to stiffen these joints and help prevent rail rotation. 
 
