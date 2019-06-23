@@ -1,6 +1,6 @@
-Use the below pin definitions and pinout diagrams as a quick reference to modify your printer configuration easily.
+Use the below pin definitions and pinout diagrams as a quick reference to modify your printer configuration easily. You can also cut and paste these sections and add as a comment block to your config.
 
-## RAMPS 1.4 Pins  
+## RAMPs 1.4 Pins  
 ```X_STEP_PIN         ar54
 X_DIR_PIN          ar55
 X_ENABLE_PIN       ar38
@@ -29,7 +29,7 @@ TEMP_0_PIN         analog13
 TEMP_1_PIN         analog14
 TEMP_2_PIN         analog15
 ```
-![]()
+![RAMPs 1.4](/Firmware/ramps_1.4.png)
 
 ## SKR 1.3 Pins
 ```X_STEP_PIN         2.2
@@ -72,4 +72,4 @@ TB  (Bed Temp)     0.23
 FAN                2.3
 SERVO              2.0
 ```
-![]()
+![SKR 1.3](/Firmware/skr_1.3.png)
