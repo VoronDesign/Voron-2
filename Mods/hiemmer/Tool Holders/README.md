@@ -11,6 +11,3 @@ Bonus, they also help to hold the side panels in place.
  * 2x M3x10 SHCS
  * 2x M3 T-nut
 
- ![Screwdriver Holder](Screwdriver Holder.png)
- ![Caliper Hex Holder](Caliper_Hex Holder.png)
-
