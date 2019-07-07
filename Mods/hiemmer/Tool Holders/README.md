@@ -2,7 +2,7 @@
 
 ### Overview
 
-These are some tool holders which mount directly to the 2020 extrusions of the Voron.
+These are tool holders which mount directly to the 2020 extrusions of the Voron.
 
 Bonus, they also help to hold the side panels in place.
 
