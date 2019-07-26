@@ -46,4 +46,4 @@ TB  (Bed Temp)     0.23
 FAN                2.3
 SERVO              2.0
 ```
-![SKR 1.3](/skr_1.3.png)
+![SKR 1.3](skr_1.3.png)
