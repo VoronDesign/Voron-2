@@ -302,6 +302,12 @@ Also covers the Z-belt hole for improved aesthetics.
 
 - Mount for an ethernet coupler to extend / move the ethernet plug somewhere more convenient. 
 
+## warriorofwire
+
+[Openbuilds Drag Chain](https://github.com/VoronDesign/Voron-2/tree/master/Mods/warriorofwire/openbuilds_drag_chain)
+
+- Collection of models for using an off-the-shelf, cheap, snap opening drag chain for gantry wiring and protecting wires down to the deck.
+
 ## wile.e.coyote  
 
 [Coroplast Support](https://github.com/VoronDesign/Voron-2/tree/master/Mods/wile.e.coyote)
