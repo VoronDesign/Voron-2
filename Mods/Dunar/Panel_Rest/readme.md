@@ -4,7 +4,7 @@
 
 Panel Rest for storage of up to 8 side/top panels.
 
- ![Panel Rest](Panel_Rest/panel_rest.jpg)
+ ![Panel Rest](panel_rest.jpg)
  
  Extrusion profile does not matter, if you happen to have some vslot in your basement that is perfectly fine.
  Length is not critical, should be >60% of you panel length for stability.
