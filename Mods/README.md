@@ -59,6 +59,12 @@ The list should be structured in the following way:
 
 - Detachable mount for tablet using magnets.
 
+## Dunar
+
+[Panel Rest](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Dunar/Panel_Rest)
+
+- External panel holder
+
 ## FHeilmann
 
 [Voron 2.0 5mm Parts](https://github.com/VoronDesign/Voron-2/tree/master/Mods/FHeilmann/VORON2_5mm_Parts)
