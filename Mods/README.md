@@ -158,7 +158,7 @@ The list should be structured in the following way:
 
 ## K1JWG
 
-[PanelDue 7i Custom Logo](https://github.com/jwg3/Voron-2/tree/master/Mods/K1JWG/PanelDue7iLogo)
+[PanelDue 7i Custom Logo](https://github.com/jwg3/Voron-2/tree/master/Mods/K1JWG)
 
 - Custom Voron 2 logo for use as a PanelDue 7i startup splash screen.
 
