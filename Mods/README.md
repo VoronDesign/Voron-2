@@ -12,11 +12,11 @@ The list should be structured in the following way:
 "Mods name"
 
 - "Small desciption of the mod"  
-  
+
 "Mod 2's name"
 
 - "Small desciption of the mod"  
-  
+
 ---
 
 ## 3D_Black
@@ -24,7 +24,7 @@ The list should be structured in the following way:
 [Fan Covers](https://github.com/VoronDesign/Voron-2/tree/master/Mods/3D_Black)  
 
 - Different fan covers for 40mm fans.  
-  
+
 ## Andreq
 
 [Mobius Shaft Jig](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Andreq/VORON2)
@@ -162,6 +162,12 @@ The list should be structured in the following way:
 
 - Mains plug panel with ethernet cutout.
 
+## K1JWG
+
+[PanelDue 7i Custom Logo](https://github.com/jwg3/Voron-2/tree/master/Mods/K1JWG/PanelDue7iLogo)
+
+- Custom Voron 2 logo for use as a PanelDue 7i startup splash screen.
+
 ## Koios
 
 [Front Panel Locks](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Koios/6mm_Glass)
@@ -180,7 +186,7 @@ The list should be structured in the following way:
 
 [Dual Direct Drive X Carriage](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Railgunner/10mmBMGx2)
 
-- Dual direct drive using 2x Bondtech BMG. 
+- Dual direct drive using 2x Bondtech BMG.
 
 ## Seamen
 
@@ -317,7 +323,7 @@ Also covers the Z-belt hole for improved aesthetics.
 
 [RJ45 Mount](https://github.com/VoronDesign/Voron-2/tree/master/Mods/synfinatic/RJ45-Mount)
 
-- Mount for an ethernet coupler to extend / move the ethernet plug somewhere more convenient. 
+- Mount for an ethernet coupler to extend / move the ethernet plug somewhere more convenient.
 
 ## warriorofwire
 
