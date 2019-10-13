@@ -52,6 +52,13 @@ The list should be structured in the following way:
 
 - Configuration for SKR 1.3 TMC2208 UART
 
+
+## crzcrz
+
+[Fysetc Mini 12864 Display Enclosure](https://github.com/VoronDesign/Voron-2/tree/master/mods/crzcrz/fysetc_mini12864_display_enclosure)
+
+- Enclosure for the Fysetc Mini 12864 display, compatible with the stock mounts.
+
 ## Danowar
 
 [F6 Board Mount](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Danowar/F6_Board_Mount)
