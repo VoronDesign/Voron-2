@@ -228,16 +228,6 @@ The list should be structured in the following way:
 
 - Drop in replacement of the stock probe to a BLTouch.
 
-## Volcom8190
-
-[Nozzle Scrubber](https://github.com/VoronDesign/Voron-2/tree/master/mods/volcom8190/V2_and_V2.1/Nozzle_Scrubber)
-
-- Mount for brass brush with added waste bucket.
-
-[Panels - Handles - Skirts](https://github.com/VoronDesign/Voron-2/tree/master/mods/volcom8190/V2_and_V2.1/Panels)
-
-- Different panels, skirts, handles and some mods for the filtered mains.
-
 ## daveidmx
 
 [30mm Fan Adapter](https://github.com/VoronDesign/Voron-2/tree/master/mods/daveidmx/VORON2)
