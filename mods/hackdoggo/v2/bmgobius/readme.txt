@@ -1,5 +1,5 @@
 This is a modification to MZBot's Mobius Extruder to use dual drive Bondtech drivegears.
-https://github.com/mzbotreprap/VORON/tree/master/STLs/VORON2/VORON%20Mobius
+https://github.com/VoronDesign/Mobius-Extruder
 
 You will need to substitue the 45mm long 5mm diameter shaft for a 60mm long shaft
 2x M3x20
