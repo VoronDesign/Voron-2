@@ -27,7 +27,7 @@ The list should be structured in the following way:
 
 ## Andreq
 
-[Mobius Shaft Jig](https://github.com/VoronDesign/Voron-2/tree/master/mods/Andreq/VORON2)
+[Mobius Shaft Jig](https://github.com/VoronDesign/Voron-2/tree/master/mods/andreq/voron2)
 
 - Tool used for grinding flats on a shaft at specific places.
 
@@ -108,7 +108,7 @@ The list should be structured in the following way:
 
 ## Hackdoggo
 
-[BMGobius](https://github.com/VoronDesign/Voron-2/tree/master/mods/Hackdoggo/V2/BMGobius)
+[BMGobius](https://github.com/VoronDesign/Voron-2/tree/master/mods/hackdoggo/v2/bmgobius)
 
 - Modification to MZBot's Mobius Extruder to use dual drive Bondtech drivegears.
 
@@ -164,7 +164,7 @@ The list should be structured in the following way:
 
 ## K1JWG
 
-[PanelDue 7i Custom Logo](https://github.com/jwg3/Voron-2/tree/master/mods/K1JWG/PanelDue7iLogo)
+[PanelDue 7i Custom Logo](https://github.com/VoronDesign/Voron-2/tree/master/mods/K1JWG/PanelDue7iLogo)
 
 - Custom Voron 2 logo for use as a PanelDue 7i startup splash screen.
 
@@ -230,11 +230,11 @@ The list should be structured in the following way:
 
 ## Volcom8190
 
-[Nozzle Scrubber](https://github.com/VoronDesign/Voron-2/tree/master/mods/Volcom8190/V2_and_V2.1/Nozzle_Scrubber)
+[Nozzle Scrubber](https://github.com/VoronDesign/Voron-2/tree/master/mods/volcom8190/V2_and_V2.1/Nozzle_Scrubber)
 
 - Mount for brass brush with added waste bucket.
 
-[Panels - Handles - Skirts](https://github.com/VoronDesign/Voron-2/tree/master/mods/Volcom8190/V2_and_V2.1/Panels)
+[Panels - Handles - Skirts](https://github.com/VoronDesign/Voron-2/tree/master/mods/volcom8190/V2_and_V2.1/Panels)
 
 - Different panels, skirts, handles and some mods for the filtered mains.
 
