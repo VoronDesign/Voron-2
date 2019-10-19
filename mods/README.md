@@ -33,7 +33,7 @@ The list should be structured in the following way:
 
 ## Armstr0ng
 
-[Led extrusions mount]((../mods/Armstr0ng))
+[Led extrusions mount](../mods/Armstr0ng)
 
 - A mount for aluminium LED extrusions with hidden fasteners  
 
