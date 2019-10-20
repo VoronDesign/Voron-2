@@ -69,10 +69,6 @@ The list should be structured in the following way:
 
 - Mount for Humidity/Temperature sensor.
 
-[Load Cell Spool Holder](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Danowar/Load_Cell_Spool_Holder)
-
-- Spool holder with built in weight scale.
-
 [Load Cell Spool Holder](../mods/Danowar/Load_Cell_Spool_Holder)
 
 - Spool holder with built in weight scale.
