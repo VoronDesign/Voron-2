@@ -53,6 +53,9 @@ The list should be structured in the following way:
 - Configuration for SKR 1.3 TMC2208 UART
 
 ## Danowar
+[Dual Mobius Mount](https://github.com/danowar/Voron-2/tree/master/mods/Danowar/Dual_Mobuis_Mount)
+
+- Mounts two Mobius Extruders to the back of the printer.
 
 [F6 Board Mount](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Danowar/F6_Board_Mount)
 
@@ -62,9 +65,17 @@ The list should be structured in the following way:
 
 - Klipper config for a FYSETC F6 350 build.
 
+[Humidity Sensor Bracket](https://github.com/danowar/Voron-2/tree/master/mods/Danowar/Humidity_Sensor_Bracket)
+
+- Mount for Humidity/Temperature sensor.
+
 [Load Cell Spool Holder](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Danowar/Load_Cell_Spool_Holder)
 
 - Spool holder with built in weight scale.
+
+[TL 2-to-1 Mosquito Toolhead Adapter](https://github.com/danowar/Voron-2/tree/master/mods/Danowar/TL_2-to-1_Mosquito_Toolhead_Adapter)
+
+- Mounts the Triangle Labs 2-to-1 adapter directly to the mosquito toolhead.
 
 [Tablet mount](https://github.com/VoronDesign/Voron-2/tree/master/Mods/Danowar/Tablet_Mount)
 
