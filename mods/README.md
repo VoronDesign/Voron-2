@@ -77,7 +77,7 @@ The list should be structured in the following way:
 
 - Mounts the Triangle Labs 2-to-1 adapter directly to the mosquito toolhead.
 
-[Tablet mount](../Mods/Danowar/Tablet_Mount)
+[Tablet mount](../mods/Danowar/Tablet_Mount)
 
 - Detachable mount for tablet using magnets.
 
