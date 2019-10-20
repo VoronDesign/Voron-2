@@ -1,5 +1,5 @@
 # VORON2-Mods
-Mods for the VORON2 3D-Printer https://github.com/mzbotreprap/VORON
+Mods for the VORON2 3D-Printer
 
 This is a holder for the RAMPS board with the stepper extender.
 
