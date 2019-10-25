@@ -1,4 +1,6 @@
 # Direct Drive Mount for BMG-M on 2.1 and 2.2
+![example image](https://user-images.githubusercontent.com/3454741/67543958-79ce1b80-f6a8-11e9-998e-90cd94887999.png)
+
 Note:
 * Tested with 300mm 2.1 build only.
 * 1.6 looks plausible too, ymmv.
@@ -18,6 +20,7 @@ Note:
 * [OMC 20mm pancake stepper](https://www.omc-stepperonline.com/nema-17-stepper-motor/nema-17-bipolare-1-8deg-13ncm-18-4oz-in-1a-3-5v-42x42x20mm-4-fili.html) but use it at like 0.6 amps instead.
 * [Slice Mosquito](https://www.sliceengineering.com/collections/hotends/products/the-mosquito-hotend%E2%84%A2)
 * Slice fan.  Use their fan or you're way on your own!
+* Same neat little 40mm blower from the Voron BOM.
 
 
 ## STLs
