@@ -1,7 +1,7 @@
 # Wrench for 2.2 Knobs and Panel Clips
 
 ### Overview
-![Image](../mods/Danowar/V2.2_Wrench/2.2_Wrench.PNG)
+![Image](../V2.2_Wrench/2.2_Wrench.PNG)
 
 Two sided wrench for tightening knobs on the Voron 2.2 Z Drive and A/B Drives.
 Purpose of this wrench is to assist with gripping the knobs, NOT for over-torquing
