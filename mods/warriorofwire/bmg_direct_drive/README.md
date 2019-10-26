@@ -11,8 +11,9 @@ Note:
 * I couldn't get my bowden extruder to bridge well.  Pressure advance only gets you so far.
 
 ## BOM
-* 3x m3x8 Socket head screws
+* 5x m3x8 Socket head screws
 * 1x m3x6 Socket head screw
+* 2x m2x 6-10 socket head screw
 * 4x m3 nuts
 * [Bondtech BMG-m](https://www.bondtech.se/en/product/bmg-m-extruder/)
 * [Bondtech BMG mount plate](https://www.bondtech.se/en/product/bmg-alu-mount/)
@@ -34,8 +35,8 @@ fan_mount.stl | Print with vent face down.  No supports.
 3. If you have an M3 tap, tap the bottom holes on your hotend fan.
 4. Bolt the plate to your carriage.  Sorry, the m3 nuts don't stay put very well and the space is too small for your fingers.
 5. In whatever order you like, bolt the BMG-m to the stepper through the ALU plate, bolt the Mosquito to the BMG-m, bolt the hotend fan to the Mosquito under the BMG-m.
-6. Bolt the fan_mount to the hotend fan.  Yo dawg I heard you liked fans...
-7. Bolt the 40mm blower to the fan_mount. (m2.5's)
+6. Bolt the fan_mount to the hotend fan. (m3x8)  Yo dawg I heard you liked fans...
+7. Bolt the 40mm blower to the fan_mount. (m2's)
 8. Wire to taste.
 9. Set esteps to 415 per Bondtech, reset the X/Y location of your touch probe.
 10. Print!
