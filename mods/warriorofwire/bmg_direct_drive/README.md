@@ -26,7 +26,7 @@ Note:
 ## STLs
 File | Note
 ---- | ----
-gumby_mount.stl | Print solid.  No supports.
+gumby_mount_mosquito.stl | Print solid.  No supports.  Print the v6 one if you're of the e3d persuasion.
 fan_mount.stl | Print with vent face down.  No supports.
 
 ## Assembly
