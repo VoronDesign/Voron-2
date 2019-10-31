@@ -1,4 +1,4 @@
-# Screen case and Software for Waveshare 5inch HDMI LCD (B)
+# Screen case and (proposed) Software for Waveshare 5inch HDMI LCD (B)
 
 The screen description can be found here: [Links](https://www.waveshare.com/wiki/5inch_HDMI_LCD_(B))
 
