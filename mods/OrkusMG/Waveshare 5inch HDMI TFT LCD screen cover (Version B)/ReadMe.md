@@ -1,6 +1,6 @@
 # Screen case and (proposed) Software for Waveshare 5inch HDMI LCD (B)
 
-The screen description can be found here: [Links](https://www.waveshare.com/wiki/5inch_HDMI_LCD_(B))
+The screen description can be found [here](https://www.waveshare.com/wiki/5inch_HDMI_LCD_(B))
 
 Note that there is few versions of Waveshare 5" screen. I opted for B due to:
 
@@ -11,4 +11,4 @@ Note that there is few versions of Waveshare 5" screen. I opted for B due to:
 
 For software I use Octoscreen which does not use chromium browser like TouchUI does, this means that it has almost zero additional usage for RPi CPU.
 
-More details about software can be found here: [Links](https://community.octoprint.org/t/octoscreen-a-new-software-to-use-octoprint-with-lcd/10629)
+More details about software can be found [here](https://community.octoprint.org/t/octoscreen-a-new-software-to-use-octoprint-with-lcd/10629)
