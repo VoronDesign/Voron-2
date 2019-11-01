@@ -1,6 +1,8 @@
 # Off The Shelf Drag Chains for 2.2
 Note: Printed but untested.  If you try this, tell me what worked and what didn't on Discord.  I'll use it soon enough.
 
+![Render because I do not have a 2.2 yet](https://user-images.githubusercontent.com/3454741/68000301-c66fa480-fc1c-11e9-9096-63312416205e.png)
+
 ## Why
 * Drag chains with a snap open side are a joy to work on.
 * It looks awesome.
