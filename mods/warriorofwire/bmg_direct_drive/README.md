@@ -42,6 +42,7 @@ fan_mount.stl | Print with vent face down.  No supports.
 10. Print!
 
 ## Known Issues
+* No doors.  They add weight and aid nothing.  You're on your own if you want them!
 * This will offset your nozzle 15.4mm to the left.  You can move your bed over.
 * Putting it together is a nuisance.
 * You have to drill a hole in your Bondtech aluminum plate for the left Voron mount screw.  Just do it; it's only aluminum.
