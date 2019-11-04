@@ -328,15 +328,9 @@ Also covers the Z-belt hole for improved aesthetics.
 
 ## warriorofwire
 
-Openbuilds Drag Chain
+[Openbuilds Drag Chain](../mods/warriorofwire/openbuilds_drag_chain)
 
-- Off-the-shelf, cheap, snap opening drag chain for gantry wiring and protecting wires down to the deck.
-  - [2.2 printers](../mods/warriorofwire/openbuilds_drag_chain_2.2)
-  - [2.1 printers](../mods/warriorofwire/openbuilds_drag_chain_2.1)
-
-[Direct Drive BMG-m mount](../mods/warriorofwire/bmg_direct_drive)
-
-- Bondtech BMG-m and Mosquito direct drive combo.  Partial support for e3d v6.
+- Collection of models for using an off-the-shelf, cheap, snap opening drag chain for gantry wiring and protecting wires down to the deck.
 
 ## wile.e.coyote  
 
