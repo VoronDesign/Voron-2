@@ -2,7 +2,7 @@
 ![example image](https://user-images.githubusercontent.com/3454741/67543958-79ce1b80-f6a8-11e9-998e-90cd94887999.png)
 
 Note:
-* Tested with 300mm 2.1 build only.
+* Tested with 300mm 2.1 and 350 2.2.
 * 1.6 looks plausible too, ymmv.
 
 ## Why
@@ -46,3 +46,10 @@ fan_mount.stl | Print with vent face down.  No supports.
 * Putting it together is a nuisance.
 * You have to drill a hole in your Bondtech aluminum plate for the left Voron mount screw.  Just do it; it's only aluminum.
 * It's DD so the tool head is a little heavier than the stock bowden.  The mass is distributed differently, so it's not a straightforward comparison but generally you'll want somewhat lower acceleration & jerk settings.  You can still print at high speeds but you need to consider mass direction changes.
+
+
+## Pro tips
+User | Printer | Note
+---- | ---- | ----
+warriorofwire | 2.1 300mm^3 Mosq. 0.4 nozzle | I use 2000 accel travel 350 and 80mm/sec
+hevilp | 2.2 350mm^3; Mosq.Magnum 0.8 nozzle | 3000 accel, travel 300 corner velocity 10, 60mm/sec.  23mm^3/sec at 0.96 line width and 0.4 layer height.
