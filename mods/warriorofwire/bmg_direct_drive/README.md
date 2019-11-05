@@ -43,12 +43,11 @@ fan_mount.stl | Print with vent face down.  No supports.
 
 ## Known Issues
 * This will offset your nozzle 15.4mm to the left.  You can move your bed over.
-* Putting it together is a nuisance.
-* You have to drill a hole in your Bondtech aluminum plate for the left Voron mount screw.  Just do it; it's only aluminum.
-* It's DD so the tool head is a little heavier than the stock bowden.  The mass is distributed differently, so it's not a straightforward comparison but generally you'll want somewhat lower acceleration & jerk settings.  You can still print at high speeds but you need to consider mass direction changes.
+* You have to drill a hole in your Bondtech aluminum plate for the left Voron mount screw.  Just do it; it's only aluminum.  I recommend using a stepped bit for a clean hole.
+* It's DD so the tool head is a little heavier than the stock bowden.  The mass is distributed differently, so it's not a straightforward comparison but generally you'll want somewhat lower acceleration & jerk settings.  You can still print at high speeds but you need to consider mass direction changes.  Some people still use it at full speed anyway.
 
 
-## Pro tips
+## Setups
 User | Printer | Note
 ---- | ---- | ----
 warriorofwire | 2.1 300mm^3 Mosq. 0.4 nozzle | I use 2000 accel travel 350 and 80mm/sec
