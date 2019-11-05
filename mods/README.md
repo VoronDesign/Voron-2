@@ -193,6 +193,13 @@ The list should be structured in the following way:
 
 - Different mounts for LED light bars.
 
+## OrkusMG
+
+[Waveshare 5 Inch LCD Cover](../mods/OrkusMG/Waveshare5inchHDMILCDscreenCover)
+
+- Display Cover for the Waveshare 5 inch HDMI LCD screen.
+
+
 ## Railgunner
 
 [Dual Direct Drive X Carriage](../mods/Railgunner/10mmBMGx2)
