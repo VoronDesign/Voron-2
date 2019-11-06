@@ -12,3 +12,9 @@ Note that there is few versions of Waveshare 5" screen. I opted for B due to:
 For software I use Octoscreen which does not use chromium browser like TouchUI does, this means that it has almost zero additional usage for RPi CPU.
 
 More details about software can be found here: [Links](https://community.octoprint.org/t/octoscreen-a-new-software-to-use-octoprint-with-lcd/10629)
+
+![Front](https://github.com/orkusmg/Voron-2/blob/master/mods/OrkusMG/Waveshare5inchHDMILCDscreenCover/front.jpg)
+
+![Top](https://github.com/orkusmg/Voron-2/blob/master/mods/OrkusMG/Waveshare5inchHDMILCDscreenCover/top.jpg)
+
+![Side](https://github.com/orkusmg/Voron-2/blob/master/mods/OrkusMG/Waveshare5inchHDMILCDscreenCover/side.jpg)
