@@ -1,0 +1,7 @@
+# This is a travis-ci.org continuous integration configuration file.
+
+cache:
+  directories:
+  - travis_cache
+
+script: ./scripts/travis-build.sh
