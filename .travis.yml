@@ -4,4 +4,6 @@ cache:
   directories:
   - travis_cache
 
+install: ./scripts/travis-install.sh
+
 script: ./scripts/travis-build.sh
