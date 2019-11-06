@@ -2,6 +2,8 @@
 
 The screen description can be found here: [Links](https://www.waveshare.com/wiki/5inch_HDMI_LCD_(B))
 
+Screen uses original mounting hinges so you can move it as you would with original Voron screen.
+
 Note that there is few versions of Waveshare 5" screen. I opted for B due to:
 
 * Convenient HDMI port location
