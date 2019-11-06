@@ -4,6 +4,7 @@ cache:
   directories:
   - travis_cache
 
-install: ./scripts/travis-install.sh
+before_install:
+  - chmod +x ./scripts/travis-build.sh
 
 script: ./scripts/travis-build.sh
