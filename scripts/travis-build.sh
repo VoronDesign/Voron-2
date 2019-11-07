@@ -9,7 +9,7 @@ if [ ! -d ${ADMESH_DIR} ]; then
   cd ${ADMESH_DIR}
   ./configure
   make
+  chmod +x admesh
 fi
 cd ${ADMESH_DIR}
-chmod +x admesh
 find ${BASE_DIR} -type f -iname "*.STL" -exec ./admesh {} \;
