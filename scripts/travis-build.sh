@@ -8,6 +8,7 @@ ADMESH_DIR=${CACHE_DIR}/admesh-0.98.4
 mkdir -p ${CACHE_DIR}
 cd ${CACHE_DIR}
 if [ ! -d ${ADMESH_DIR} ]; then
+  echo "Admesh cache miss; fetching and building ..."
   wget https://github.com/admesh/admesh/releases/download/v0.98.4/admesh-0.98.4.tar.gz
   tar -zxvf admesh-0.98.4.tar.gz
   cd ${ADMESH_DIR}
