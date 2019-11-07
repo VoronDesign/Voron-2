@@ -11,4 +11,5 @@ if [ ! -d ${ADMESH_DIR} ]; then
   make
 fi
 cd ${ADMESH_DIR}
-find ${BASE_DIR} -type f -iname "*.STL" -exec admesh {} \;
+chmod +x admesh
+find ${BASE_DIR} -type f -iname "*.STL" -exec ./admesh {} \;
