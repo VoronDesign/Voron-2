@@ -339,6 +339,10 @@ Also covers the Z-belt hole for improved aesthetics.
 
 - Collection of models for using an off-the-shelf, cheap, snap opening drag chain for gantry wiring and protecting wires down to the deck.
 
+[Direct Drive BMG-m mount](../mods/warriorofwire/bmg_direct_drive)
+
+- Open toolhead mounting plans for Bondtech BMG-m and Mosquito direct drive combo.
+
 ## wile.e.coyote  
 
 [Coroplast Support](../mods/wile.e.coyote)
