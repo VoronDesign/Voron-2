@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/python3
 import subprocess, re, os, sys, getopt
 
 def read_param(text, parameter):
