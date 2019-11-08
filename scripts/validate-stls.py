@@ -14,8 +14,8 @@ def read_param(text, parameter):
 def assert_param_threshold(result, parameter, threshold):
     param_val = read_param(result, parameter)
     if param_val > threshold:
-        print ("Detected \"{0}\" value of {1}".format(parameter, param_val))
-        raise
+        #print ("Detected \"{0}\" value of {1}".format(parameter, param_val))
+        raise Exception("Detected \"{0}\" value of {1}".format(parameter, param_val))
     #else:
         #print ("{0} value OK".format(parameter))
 
