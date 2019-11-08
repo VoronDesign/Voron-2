@@ -4,7 +4,6 @@ CACHE_DIR=${PWD}/travis_cache
 chmod +x ${BASE_DIR}/scripts/*.py
 
 ADMESH_DIR=${CACHE_DIR}/admesh-0.98.4
-rm -rf ${CACHE_DIR}
 mkdir -p ${CACHE_DIR}
 cd ${CACHE_DIR}
 if [ ! -d ${ADMESH_DIR} ]; then
@@ -17,4 +16,4 @@ if [ ! -d ${ADMESH_DIR} ]; then
   chmod +x admesh
 fi
 cd ${ADMESH_DIR}
-.${BASE_DIR}/scripts/validate-stls.py ${BASE_DIR}
+${BASE_DIR}/scripts/validate-stls.py ${BASE_DIR}
