@@ -1,8 +1,7 @@
 BASE_DIR=${PWD}
 CACHE_DIR=${PWD}/travis_cache
 
-chmod +x ${BASE_DIR}/scripts/stl-checks.sh
-chmod +x ${BASE_DIR}/scripts/stl-violation-check.sh
+chmod +x ${BASE_DIR}/scripts/*.py
 
 ADMESH_DIR=${CACHE_DIR}/admesh-0.98.4
 mkdir -p ${CACHE_DIR}
@@ -17,4 +16,5 @@ if [ ! -d ${ADMESH_DIR} ]; then
   chmod +x admesh
 fi
 cd ${ADMESH_DIR}
-find ${BASE_DIR} -type f -iname "*.STL" -exec ${BASE_DIR}/scripts/stl-checks.sh {} \;
+cp -R ${BASE_DIR}/scripts .
+./validate-stls.py ${BASE_DIR}
