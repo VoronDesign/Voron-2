@@ -14,8 +14,8 @@ def read_param(text, parameter):
 def assert_param_threshold(result, parameter, threshold):
     param_val = read_param(result, parameter)
     if param_val > threshold:
-        #print ("Detected \"{0}\" value of {1}".format(parameter, param_val))
-        raise Exception("Detected \"{0}\" value of {1}".format(parameter, param_val))
+        print ("!! Detected \"{0}\" value of {1}".format(parameter, param_val))
+        exit(1)
     #else:
         #print ("{0} value OK".format(parameter))
 
@@ -34,7 +34,7 @@ def process_stl(filename):
 
 def main(argv):
 
-    argument = ' '.join(sys.argv[1:])
+    argument = " ".join(sys.argv[1:])
 
     for root, dirs, files in os.walk(argument):
         for file in files:
