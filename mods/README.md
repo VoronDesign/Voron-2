@@ -193,6 +193,21 @@ The list should be structured in the following way:
 
 - Different mounts for LED light bars.
 
+## ObviousInRetrospect
+
+
+[BMG Astrosyn Mount](../mods/ObviousInRetrospect/bmg_astrosyn_mount)
+
+- Mount for an astrosyn on the back panel with a matching BMG mount. Reduces vibration and noise for high PA values.
+
+[Fan Cover with Thermistor](../mods/ObviousInRetrospect/fan_cover)
+
+- Rev of [Fan Covers](../mods/3D_Black) that adds a mount for an e3d style thermistor cartridge to get air temperature near the print head.
+
+[LED Mounts](../mods/ObviousInRetrospect/led_channel_mount)
+
+- Mount for LED strip U shaped channel extrusion (17.5mm x 7mm nominal).
+
 ## OrkusMG
 
 [Waveshare 5 Inch LCD Cover](../mods/OrkusMG/Waveshare5inchHDMILCDscreenCover)
