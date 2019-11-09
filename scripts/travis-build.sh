@@ -1,4 +1,4 @@
 echo "Git diff"
-git remote set-branches --add origin $TRAVIS_BRNACH
+git remote set-branches --add origin master
 git fetch
-git diff --name-only HEAD...$TRAVIS_BRANCH
+git diff --name-only origin/master
