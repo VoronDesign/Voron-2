@@ -1,2 +1,2 @@
 echo "Git diff"
-git diff --name-only --diff-filter=AM HEAD...$TRAVIS_BRANCH
+git diff --name-only master..$TRAVIS_BRANCH
