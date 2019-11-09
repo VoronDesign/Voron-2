@@ -22,5 +22,4 @@ cd ${ADMESH_DIR}
 # Find changed files
 git remote set-branches --add origin master
 git fetch
-git diff --name-only --diff-filter=AMR origin/master | xargs -L1 
-git diff --name-only --diff-filter=AMR origin/master | xargs -L1 ${BASE_DIR}/scripts/validate-file.py
+git diff --name-only --diff-filter=AMR origin/master | xargs -n 1 -I {} ${BASE_DIR}/scripts/validate-file.py ${BASE_DIR}/{}
