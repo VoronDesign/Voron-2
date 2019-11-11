@@ -17,7 +17,7 @@ latter can be preferred as you will not need a Github account or
 credentials set up. After clicking "Clone or download" make sure you
 see "Clone with HTTPS", and click "Use HTTPS" if you don't.
 
-# Updating a repo (#updating)
+# Updating a repo
 
 To fetch the latest changes, run `git pull origin`. Note that your
 current working directory will need to be inside the repo.
@@ -47,5 +47,5 @@ from different repos overlap. When this occurs git will print an error
 about a conflict, and ask you to fix it.
 
 The most reliable way to fix it is to start fresh, using the command above
-in [Updating a repo](#updating).
+in [Updating a repo](#updating-a-repo).
 
