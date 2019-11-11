@@ -1,0 +1,15 @@
+# This is a travis-ci.org continuous integration configuration file.
+language: node_js
+node_js:
+  - 12
+
+cache:
+  npm: true
+  directories:
+  - travis_cache
+
+before_install:
+  - chmod +x ./travis_scripts/ci-build.sh
+  - npm install remark-cli remark-validate-links
+
+script: ./travis_scripts/ci-build.sh
