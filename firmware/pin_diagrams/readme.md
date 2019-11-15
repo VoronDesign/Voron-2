@@ -29,7 +29,7 @@ TEMP_0_PIN         analog13
 TEMP_1_PIN         analog14
 TEMP_2_PIN         analog15
 ```
-![RAMPs 1.4](/Firmware/ramps_1.4.png)
+![RAMPs 1.4](./ramps_1.4.png)
 
 ## SKR 1.3 Pins
 ```X_STEP_PIN         2.2
@@ -72,4 +72,4 @@ TB  (Bed Temp)     0.23
 FAN                2.3
 SERVO              2.0
 ```
-![SKR 1.3](/Firmware/skr_1.3.png)
+![SKR 1.3](./skr_1.3.png)
