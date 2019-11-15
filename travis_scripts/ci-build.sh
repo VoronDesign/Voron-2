@@ -3,6 +3,29 @@
 BASE_DIR=${PWD}
 CACHE_DIR=${PWD}/travis_cache
 
+######################################################################
+# Travis CI helpers
+######################################################################
+
+start_test()
+{
+    echo "travis_fold:start:$1"
+    echo "=============== $2"
+    set -x
+}
+
+finish_test()
+{
+    set +x
+    echo "=============== Finished $2"
+    echo "travis_fold:end:$1"
+}
+
+
+######################################################################
+# Admesh setup
+######################################################################
+
 chmod +x ${BASE_DIR}/travis_scripts/*.py
 
 ADMESH_DIR=${CACHE_DIR}/admesh-0.98.4
@@ -20,19 +43,34 @@ fi
 cd ${BASE_DIR}
 sudo ln -s ${ADMESH_DIR}/admesh /usr/bin/admesh
 
+
+######################################################################
+# STL / changed file Validation
+######################################################################
+
+start_test validate_stls "Validate STLs"
+
 if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-  # Compare branch against master
-  git remote set-branches --add origin master
-  git fetch
-  git diff --name-only --diff-filter=AMR origin/master | xargs -n 1 -I {} ${BASE_DIR}/travis_scripts/validate-file.py ${BASE_DIR}/{}
+  # Regular branch push, test all files
+  find ${BASE_DIR} -type f -iname "*.STL" -exec "${BASE_DIR}/travis_scripts/validate-file.py" {} \;
 else
   # Compare head against the branch to merge into (PR)
   git diff --name-only --diff-filter=AMR -R HEAD origin/${TRAVIS_BRANCH} | xargs -n 1 -I {} ${BASE_DIR}/travis_scripts/validate-file.py ${BASE_DIR}/{}
 fi
 
+finish_test validate_stls "Validate STLs"
+
+######################################################################
+# Markdown Validation
+######################################################################
+
+start_test validate_markdown "Validate Markdown"
+
 cd ${BASE_DIR}
 
 # Validate all markdown files (eg, README.md).
 remark -u validate-links --no-stdout --frail .
+
+finish_test validate_markdown "Validate Markdown"
 
 
