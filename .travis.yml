@@ -9,7 +9,8 @@ cache:
   - travis_cache
 
 before_install:
-  - chmod +x ./travis_scripts/ci-build.sh
   - npm install remark-cli remark-validate-links
 
-script: ./travis_scripts/ci-build.sh
+script: 
+  - git clone https://github.com/VoronDesign/GithubScripts.git .github_scripts
+  - /bin/bash ./.github_scripts/travis/ci-build.sh
