@@ -1,2 +1,3 @@
-This wiring diagram and configuration applies to the Voron V2.2, not the Voron V2.4. You may need to modify some stepper directions and step distances. It is critical to adjust the Vref on your extruder stepper driver for Afterburner--it cannot take as high Vref as the other motors.
+<B>VORON V2.2 RAMPS Config</B>
 
+This config file is for using two RAMPS boards on the Voron V2.2. This an unsupported configuration for V2.4 and will need several tweaks to work properly including potential stepper driver direction modifications, step distance updates, etc. Please note that the afterburner stepper motor cannot take as high current as the Mobius stepper, so you will have to reduce the A4988 Vref.
