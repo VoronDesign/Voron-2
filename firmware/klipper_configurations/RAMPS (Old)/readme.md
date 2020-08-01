@@ -1,0 +1,3 @@
+<B>VORON V2.2 RAMPS Config</B>
+
+This config file is for using two RAMPS boards on the Voron V2.2. This an unsupported configuration for V2.4 and will need several tweaks to work properly including potential stepper driver direction modifications, step distance updates, etc. Please note that the afterburner stepper motor cannot take as high current as the Mobius stepper, so you will have to reduce the A4988 Vref.
