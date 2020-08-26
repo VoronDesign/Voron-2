@@ -1,0 +1,75 @@
+<!-- Notepad++ Syntax Highlighting for Klipper config files (.cfg) -->                    
+						<!-- By Boff -->
+
+<!-- This was mainly developed for my fellow VORON printer users -->
+<!-- so there may be things not picked up if your config is for a different printer. -->
+<!-- ...But I've tried to cover everything ;o) -->
+
+<!-- To install: -->
+<!-- in Notepad++, go to 'Language' > 'Define your language...' > 'Import...' and select this file. -->
+<!-- Restart Notepad++ and you should see 'Klipper' as an option at the bottom of the 'Language' menu. -->
+
+<NotepadPlus>
+    <UserLang name="Klipper" ext="cfg" udlVersion="2.1">
+        <Settings>
+            <Global caseIgnored="no" allowFoldOfComments="no" foldCompact="no" forcePureLC="2" decimalSeparator="0" />
+            <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="no" Keywords5="yes" Keywords6="yes" Keywords7="no" Keywords8="no" />
+        </Settings>
+        <KeywordLists>
+            <Keywords name="Comments">00# 01 02 03 04</Keywords>
+            <Keywords name="Numbers, prefix1"></Keywords>
+            <Keywords name="Numbers, prefix2"></Keywords>
+            <Keywords name="Numbers, extras1"></Keywords>
+            <Keywords name="Numbers, extras2"></Keywords>
+            <Keywords name="Numbers, suffix1">,- ,</Keywords>
+            <Keywords name="Numbers, suffix2"></Keywords>
+            <Keywords name="Numbers, range"></Keywords>
+            <Keywords name="Operators1">true false True False TRUE FALSE</Keywords>
+            <Keywords name="Operators2"></Keywords>
+            <Keywords name="Folders in code1, open"></Keywords>
+            <Keywords name="Folders in code1, middle"></Keywords>
+            <Keywords name="Folders in code1, close"></Keywords>
+            <Keywords name="Folders in code2, open"></Keywords>
+            <Keywords name="Folders in code2, middle"></Keywords>
+            <Keywords name="Folders in code2, close"></Keywords>
+            <Keywords name="Folders in comment, open"></Keywords>
+            <Keywords name="Folders in comment, middle"></Keywords>
+            <Keywords name="Folders in comment, close"></Keywords>
+            <Keywords name="Keywords1">ar analog ^ ! z:&#x000D;&#x000A;PA PB PC PD&#x000D;&#x000A;EXP&#x000D;&#x000A;multi_pin:&#x000D;&#x000A;</Keywords>
+            <Keywords name="Keywords2">pid&#x000D;&#x000A;watermark&#x000D;&#x000A;min_temp&#x000D;&#x000A;max_temp&#x000D;&#x000A;heater_temp&#x000D;&#x000A;min_extrude_temp</Keywords>
+            <Keywords name="Keywords3">/dev/&#x000D;&#x000A;corexy&#x000D;&#x000A;corexz&#x000D;&#x000A;cartesian&#x000D;&#x000A;EPCOS 100K B57560G104F&#x000D;&#x000A;ATC&#x000A; Semitec 104GT-2&#x000D;&#x000A;&quot;NTC 100K beta 3950&quot;&#x000D;&#x000A;Honeywell 100K&#x000A; 135-104LAG-J01&#x000D;&#x000A;NTC 100K MGB18-104F39050L32&#x000D;&#x000A;AD595&#x000D;&#x000A;PT100&#x000A; INA826&#x000D;&#x000A;hd44780&#x000D;&#x000A;st7920&#x000D;&#x000A;probe:z_virtual_endstop&#x000D;&#x000A;sercom&#x000D;&#x000A;uc1701&#x000D;&#x000A;st7920&#x000D;&#x000A;hd44780</Keywords>
+            <Keywords name="Keywords4">gcode:</Keywords>
+            <Keywords name="Keywords5">G0 G1 G2 G3 G4 G5 G6 G7 G8 G9&#x000D;&#x000A;M0 M1 M2 M3 M4 M5 M6 M7 M8 M9</Keywords>
+            <Keywords name="Keywords6">g0 g1 g2 g3 g4 g5 g6 g7 g8 g9&#x000D;&#x000A;m0 m1 m2 m3 m4 m5 m6 m7 m8 m9</Keywords>
+            <Keywords name="Keywords7"></Keywords>
+            <Keywords name="Keywords8"></Keywords>
+            <Keywords name="Delimiters">00[ 01 02] 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
+        </KeywordLists>
+        <Styles>
+            <WordsStyle name="DEFAULT" fgColor="000000" bgColor="FFFFFF" fontName="&#xEA1C;&#x71D8;&#x0005;" fontStyle="0" nesting="0" />
+            <WordsStyle name="COMMENTS" fgColor="000000" bgColor="008040" fontName="&#x4678;&#x02D2;&#x6738;&#x06CB;&#x4678;&#x02D2;&#x0001;" fontStyle="0" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="008040" bgColor="FFFFFF" fontName="&#x00AE;" fontStyle="0" nesting="0" />
+            <WordsStyle name="NUMBERS" fgColor="0000FF" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="FF8040" bgColor="FFFFFF" fontName="&#xB276;&#x7099;&#x084F;&#x8C00;&#xAB08;&#x09F5;&#xDAD0;&#x06B7;&#xAC58;&#x09F5;&#x0001;" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS2" fgColor="FF0000" bgColor="FFFFFF" fontName="&#x0012;" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="3" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="FF80FF" bgColor="FFFFFF" fontName="&#xD008;&#x0018;&#x236B;&#x71D8;&#x0650;&#x02E9;&#x0003;" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS6" fgColor="000000" bgColor="FF0000" fontName="&#xFDAE;&#x7165;&#x0572;&#x8C00;&#xDB08;&#x06B7;&#xAC58;&#x09F5;&#xDA60;&#x06B7;&#x0001;" fontStyle="7" nesting="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="00FFFF" bgColor="FFFFFF" fontName="&#xFC14;&#x7123;&#x0F73;&#x8C00;&#x0538;&#x02E9;&#xD718;&#x06B7;&#x0538;&#x02E9;&#x0001;" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS8" fgColor="000000" bgColor="FFFFFF" fontName="&#x0538;&#x02E9;&#xDC20;&#x06B7;&#x0538;&#x02E9;&#x0001;" fontStyle="0" nesting="0" />
+            <WordsStyle name="OPERATORS" fgColor="8080C0" bgColor="FFFFFF" fontName="&#x000F;" fontStyle="3" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" fontName="&#xF1A8;&#x06D0;&#xC038;&#x06DC;&#x6838;&#x06CF;&#x68F8;&#x06CF;&#x9CE0;&#x06B5;&#x1F60;&#x09D8;&#x6788;&#x06CF;&#x6848;&#x06CF;&#x6798;&#x06CF;&#x0690;&#x06BF;&#x06F0;&#x06BF;&#xC358;&#x06DC;&#x1FD8;&#x09D8;&#xEDE8;&#x06D0;&#x3BBC;&#x7104;&#x0373;&#x8000;ing" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE2" fgColor="000000" bgColor="FFFFFF" fontName="Crack\readme-install-crack.txt" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN COMMENT" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="800080" bgColor="FFFF80" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="FF80C0" bgColor="FFFFFF" fontName="TagAttrHighLight" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="000000" bgColor="FFFFFF" fontName="&#x8578;&#x09E1;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="000000" bgColor="FFFFFF" fontName="&#x000F;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="000000" bgColor="FFFFFF" fontName="&#x4678;&#x02D2;&#x8F50;&#x06CF;&#x4678;&#x02D2;&#x0001;f&#x00F4;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS6" fgColor="000000" bgColor="FFFFFF" fontName="&#x2DA0;&#x06E1;&#xFE18;&#x09F5;&#x42B8;&#x09F7;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS7" fgColor="000000" bgColor="FFFFFF" fontName="&#x0010;" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS8" fgColor="000000" bgColor="FFFFFF" fontName="&#xD120;&#x0018;&#x236B;&#x71D8;&#x3468;&#x06E1;&#x0003;" fontStyle="0" nesting="0" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>
