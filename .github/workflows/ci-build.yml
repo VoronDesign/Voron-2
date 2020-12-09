@@ -1,0 +1,46 @@
+name: Voron CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    env:
+      GIT_BRANCH: ${{ github.head_ref }} 
+      GIT_PR_BASE_BRANCH: ${{ github.base_ref	}}
+      GIT_PULL_REQUEST: ${{ github.event.number }} 
+    steps:
+    - name: Checkout Actions
+      uses: actions/checkout@v2
+
+    - name: Cache Folder
+      id: cache-folder
+      uses: actions/cache@v2
+      with:
+        path: ci_cache
+        key: voron-ci
+    - name: Print Travis ENV vars 
+      run: |
+        echo "GIT_BRANCH: ${GIT_BRANCH}"
+        echo "GIT_PULL_REQUEST: ${GIT_PULL_REQUEST}"
+    - name: Setup NPM
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install NPM scripts
+      run: | 
+        npm init -y
+        npm install --global remark-cli remark-validate-links
+    - name: Execute CI
+      run: |
+        git clone https://github.com/VoronDesign/GithubScripts.git .github_scripts
+        /bin/bash ./.github_scripts/workflows/ci-build.sh
