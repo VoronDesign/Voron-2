@@ -8,7 +8,7 @@ The thread test STLs have two parts which should screw together easily if your p
 
 ## Voron Cube
 
-The Voron cube has overhangs and bridges - check that these print well. It also has a hole on top which should accept a 608 bearing.
+The Voron cube tests overhangs, bridging, ringing, and print accuracy. You can see your bridge though the center cutout window. Both the bearing sizes used in the Voron 2 are in the top and bottom. If you can press your bearing in by hand your printer will work with whatever settings you used to make the cube.  If you can't press the bearings in by hand continue to reduce your extrusion multi/flow until they can or figure out what is mechanically astray with your printer.
 
 ## Filament card
 
