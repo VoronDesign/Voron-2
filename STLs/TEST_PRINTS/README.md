@@ -4,7 +4,7 @@ These are models for doing test prints. You can use these to check that your pri
 
 ## Thread Tests
 
-The thread test STLs have two parts which should screw together easily if your print is dialed in. For `Thread_Test_1` and `Thread_Test_2`, you can also check that a 608 bearing press-fits into them.
+The thread test STLs have two parts which should screw together easily if your print is dialed in. For `Thread_Test_1` and `Thread_Test_2`, you can also check that a 625 bearing press-fits into them.
 
 ## Voron Cube
 
