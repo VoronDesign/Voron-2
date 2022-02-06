@@ -2,7 +2,7 @@
 
 An incredibly basic guide to using a tiny part of git.
 
-This document focusses on how to fetch a git repo, update it, and pull
+This document focuses on how to fetch a git repo, update it, and pull
 changes from other repositories.
 
 # Creating a repo
