@@ -20,11 +20,11 @@ jobs:
       GIT_PULL_REQUEST: ${{ github.event.number }} 
     steps:
     - name: Checkout Actions
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Cache Folder
       id: cache-folder
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ci_cache
         key: voron-ci
@@ -33,7 +33,7 @@ jobs:
         echo "GIT_BRANCH: ${GIT_BRANCH}"
         echo "GIT_PULL_REQUEST: ${GIT_PULL_REQUEST}"
     - name: Setup NPM
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install NPM scripts
