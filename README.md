@@ -1,7 +1,7 @@
 # Voron 2.4
 **[CLICK HERE TO DOWNLOAD](https://voron.zip/done/V2.zip)**
 
-The above link includes the stealthburner toolhead files which is compatible with several of the printers in the Voron lineup. 
+The above link includes the stealthburner toolhead files which are compatible with several of the printers in the Voron lineup. 
 To keep things organized, StealthBurner’s files are maintained separately. 
 the Stealthburner Repository can be browsed by clicking [HERE](https://github.com/VoronDesign/Voron-Stealthburner)
 
