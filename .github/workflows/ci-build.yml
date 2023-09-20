@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
     env:
       GIT_BRANCH: ${{ github.head_ref }} 
       GIT_PR_BASE_BRANCH: ${{ github.base_ref	}}
